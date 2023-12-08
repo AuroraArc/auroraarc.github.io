@@ -61,7 +61,7 @@ const config = {
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
-      title: 'Project Name',
+      title: 'Understanding the Influence of Qubit Features on Error Rates',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
       imageUrl: 'https://via.placeholder.com/250x250',
@@ -104,9 +104,9 @@ const config = {
     hideAvatarRing: false,
 
     // Available themes. To remove any theme, exclude from here.
-    // themes: [
-    //   'autumn'
-    // ],
+    themes: [
+      'autumn'
+    ],
 
     // Custom theme
     customTheme: {
