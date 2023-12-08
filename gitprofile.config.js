@@ -4,14 +4,14 @@ const config = {
   github: {
     username: 'AuroraArc', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
-    limit: 5, // How many projects to display.
+    limit: 3, // How many projects to display.
     exclude: {
       forks: true, // Forked projects will not be displayed if set to true.
       projects: ['data', 'auroraarc', 'LaTeX'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
-    linkedin: 'henry-yu',
+    linkedin: 'henry-y-36b620275',
     twitter: '',
     mastodon: '',
     facebook: '',
@@ -90,23 +90,23 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'wireframe',
+    defaultTheme: 'autumn',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
-    disableSwitch: false,
+    disableSwitch: true,
 
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
-    respectPrefersColorScheme: false,
+    respectPrefersColorScheme: true,
 
     // Hide the ring in Profile picture
     hideAvatarRing: false,
 
     // Available themes. To remove any theme, exclude from here.
-    themes: [
-      'autumn'
-    ],
+    // themes: [
+    //   'autumn'
+    // ],
 
     // Custom theme
     customTheme: {
@@ -121,11 +121,11 @@ const config = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+  // footer: `Made with <a 
+  //     class="text-primary" href="https://github.com/arifszn/gitprofile"
+  //     target="_blank"
+  //     rel="noreferrer"
+  //   >GitProfile</a> and ❤️`,
 };
 
 export default config;
