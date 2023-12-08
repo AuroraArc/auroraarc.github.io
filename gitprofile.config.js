@@ -65,7 +65,7 @@ const config = {
       description:
         'The goal of the project was to assess correlations between qubit features and ultimately predict error probability.',
       imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+      link: 'https://github.com/AuroraArc/qubit-feature-analysis',
     },
     {
       title: 'Project Name',
