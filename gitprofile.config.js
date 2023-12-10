@@ -36,7 +36,12 @@ const config = {
     'Python',
     'Java',
     'C',
-    'Placeholder'
+    'scikit-learn',
+    'Keras',
+    'Quantum Computing',
+    'Qiskit',
+    'Git',
+    'Docker',
   ],
   experiences: [
 
