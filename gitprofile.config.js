@@ -4,10 +4,10 @@ const config = {
   github: {
     username: 'AuroraArc', // Your GitHub org/user name. (Required)
     sortBy: 'updated', // stars | updated
-    limit: 4, // How many projects to display.
+    limit: 3, // How many projects to display.
     exclude: {
       forks: true, // Forked projects will not be displayed if set to true.
-      projects: ['data', 'auroraarc', 'LaTeX'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      projects: ['data', 'auroraarc', 'LaTeX', 'qubit-feature-analysis'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
@@ -64,14 +64,14 @@ const config = {
       title: 'Understanding the Influence of Qubit Features on Error Rates',
       description:
         'The goal of the project was to assess correlations between qubit features and ultimately predict error probability.',
-      imageUrl: 'https://via.placeholder.com/250x250',
+      imageUrl: 'https://www.researchgate.net/publication/352393913/figure/fig3/AS:1034818162810882@1623731284529/The-Bloch-sphere-as-a-qubit-graphic-representation.ppm',
       link: 'https://github.com/AuroraArc/qubit-feature-analysis',
     },
     {
       title: 'Breaking the Cycle: Reducing Recidivism in Iowa State Prisons',
       description:
         'Analysis of the recidivm cycle and the impact of various factors on recidivism rates.',
-      imageUrl: 'https://via.placeholder.com/250x250',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/005/720/400/non_2x/prison-icon-jail-illustration-isolated-on-white-background-free-vector.jpg',
       link: 'https://www.soa.org/49c692/globalassets/assets/files/static-pages/research/arch/2023/arch-2023-2-breaking-the-cycle-reducing-recidivism.pdf',
     },
   ],
@@ -121,11 +121,11 @@ const config = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  // footer: `Made with <a 
-  //     class="text-primary" href="https://github.com/arifszn/gitprofile"
-  //     target="_blank"
-  //     rel="noreferrer"
-  //   >GitProfile</a> and ❤️`,
+  footer: `Designed by <a 
+      class="text-primary" href="https://github.com/arifszn/gitprofile"
+      target="_blank"
+      rel="noreferrer"
+    >GitProfile</a>`,
 };
 
 export default config;
