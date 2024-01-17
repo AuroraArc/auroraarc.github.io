@@ -30,7 +30,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://raw.githubusercontent.com/AuroraArc/auroraarc.github.io/master/Henry%20Yu%20Resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://raw.githubusercontent.com/AuroraArc/auroraarc.github.io/main/Henry%20Yu%20Resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Python',
