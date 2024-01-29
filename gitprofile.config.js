@@ -11,7 +11,7 @@ const config = {
     },
   },
   social: {
-    linkedin: 'henry-y-36b620275',
+    linkedin: 'henry-yu09',
     twitter: '',
     mastodon: '',
     facebook: '',
