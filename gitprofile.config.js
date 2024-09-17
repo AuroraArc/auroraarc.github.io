@@ -41,7 +41,7 @@ const config = {
     'Kubernetes',
     'Tableau',
     'AWS',
-    'Qiskit'
+    'Qiskit',
     'scikit-learn',
     'Pytorch',
     'Quantum Computing',
