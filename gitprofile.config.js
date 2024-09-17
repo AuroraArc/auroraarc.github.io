@@ -4,7 +4,7 @@ const config = {
   github: {
     username: 'AuroraArc', // Your GitHub org/user name. (Required)
     sortBy: 'updated', // stars | updated
-    limit: 2, // How many projects to display.
+    limit: 0, // How many projects to display.
     exclude: {
       forks: true, // Forked projects will not be displayed if set to true.
       projects: ['data', 'auroraarc', 'LaTeX', 'qubit-feature-analysis'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
@@ -35,21 +35,19 @@ const config = {
   skills: [
     'Python',
     'Java',
-    'C',
-    'OpenQASM',
+    'C/C++',
     'Git',
     'Docker',
     'Kubernetes',
+    'Tableau',
+    'AWS',
+    'Qiskit'
     'scikit-learn',
-    'Keras',
     'Pytorch',
-    'Linear Algebra',
     'Quantum Computing',
-    'Data Analysis',
     'Statistical Analysis',
     'Regression Testing',
-    'Machine Learning',
-    'Deep Learning'
+    'ML/DL',
   ],
   experiences: [
 
@@ -67,12 +65,25 @@ const config = {
       institution: 'Indiana University - Bloomington',
       degree: 'B.S. Computer Science',
       from: '2023',
+      to: '2024',
+    },
+    {
+      institution: 'University of Wisconsin - Madison',
+      degree: 'B.S. Computer Science',
+      from: '2024',
       to: '2027',
     }
   ],
 
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
+    {
+      title: 'Quantum Computing and ML for DFT Calculations in Proteins',
+      description:
+        'Proposed a novel QC-ML hybrid model for accelerating DFT calculations in large molecular systems using a graph-CNN like model with a QCBM.'
+      imageUrl: 'https://lh3.googleusercontent.com/1xoO5BAUUU8kLns4myMNnKw6RRQyUk1JdlWL1M0aDiagMgaBeDA9O8Y4rYFAo9hfnzmb0cnUMrT_-cStBqnyp_zW59F5Edwbvxcy3EVmfeKS-PNgVw=w1072-h603-n-nu-rw'
+      link: 'https://github.com/AuroraArc/CNNQCBM',
+    }
     {
       title: 'Understanding the Influence of Qubit Features on Error Rates',
       description:
