@@ -95,19 +95,21 @@ svg {
   background-color: #f8f9fa;
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center the nav links */
   align-items: center;
 }
 
-.header .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  width: 200px; /* Adjust width as needed to space out links */
 }
 
 .header .nav-links a {
   margin: 0 1rem;
   text-decoration: none;
-  color: #333;
+  color: var(--base-content); /* Match the font color */
+  font-family: inherit; /* Match the font family */
 }
 
 .header .nav-links a:hover {

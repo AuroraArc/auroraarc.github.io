@@ -4,8 +4,7 @@ import '../assets/index.css'; // Import the CSS file
 const Header = () => {
   return (
     <header className="header">
-      <nav>
-        <div className="logo">My Portfolio</div>
+      <nav className="nav-container">
         <div className="nav-links">
           <Link to="/">Home</Link>
           <Link to="/projects">Projects</Link>
