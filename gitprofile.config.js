@@ -30,23 +30,28 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://raw.githubusercontent.com/AuroraArc/auroraarc.github.io/main/Henry%20Yu%20Resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://github.com/AuroraArc/auroraarc.github.io/main/cv.pdf', // Empty fileUrl will hide the `Resume` button.
   },
   skills: [
     'Python',
     'Java',
     'C/C++',
+    'R',
     'Git',
     'Docker',
     'Kubernetes',
     'Tableau',
+    'Excel',
     'AWS',
     'Qiskit',
     'scikit-learn',
     'Pytorch',
     'Quantum Computing',
     'Statistical Analysis',
-    'Regression Testing',
+    'Financial Modeling',
+    'Risk Analysis',
+    'Backtesting',
+    'Model Design',
     'ML/DL',
   ],
   experiences: [
