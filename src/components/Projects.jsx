@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import config from '../../gitprofile.config';
 import '../assets/index.css'; // Import the CSS file
 
 const Projects = () => {
@@ -9,7 +10,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className={`fade-in h-screen bg-base-300`}>
+    <div className={`fade-in h-screen bg-${config.themeConfig.customTheme['base-100']}`}>
       {loading ? (
         <div>Loading...</div>
       ) : (
