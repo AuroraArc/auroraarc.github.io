@@ -122,7 +122,6 @@ svg {
 .separator-bar {
   width: 100%;
   height: 20px;
-  background-color: var(--base-content); /* Adjust color as needed */
+  background-color: black; /* Adjust color as needed */
   opacity: 1; /* Adjust opacity as needed */
-  margin-top: 1rem;
 }
