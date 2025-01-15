@@ -27,10 +27,10 @@ const config = {
     website: '',
     phone: '',
     email: 'henry.yu094@gmail.com',
-  },
-  resume: {
+    },
+    resume: {
     fileUrl:
-      'https://github.com/AuroraArc/auroraarc.github.io/main/cv.pdf', // Empty fileUrl will hide the `Resume` button.
+      '/cv.pdf', // Path to the CV file within the project directory.
   },
   skills: [
     'Python',
