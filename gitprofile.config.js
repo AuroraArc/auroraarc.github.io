@@ -88,7 +88,7 @@ const config = {
       title: 'Understanding the Influence of Qubit Features on Error Rates',
       description:
         'The goal of the project was to assess correlations between qubit features and ultimately predict error probability.',
-      imageUrl: 'https://www.researchgate.net/publication/352393913/figure/fig3/AS:1034818162810882@1623731284529/The-Bloch-sphere-as-a-qubit-graphic-representation.ppm',
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Bloch_sphere.svg',
       link: 'https://github.com/AuroraArc/qubit-feature-analysis',
     },
     {
