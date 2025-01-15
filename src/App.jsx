@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<GitProfile />} />
+        <Route path="/" element={<GitProfile config={config}/>} />
         <Route path="/projects" element={<Projects />} />
       </Routes>
     </Router>
