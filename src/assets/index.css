@@ -121,7 +121,7 @@ svg {
 
 .separator-bar {
   width: 100%;
-  height: 20px;
-  background-color: black; /* Adjust color as needed */
-  opacity: 1; /* Adjust opacity as needed */
+  height: 2px;
+  background-color: black; /* Set background color to black */
+  opacity: 0.2; /* Adjust opacity as needed */
 }
