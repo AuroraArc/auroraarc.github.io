@@ -114,3 +114,7 @@ svg {
 .header .nav-links a:hover {
   text-decoration: underline;
 }
+
+.lighter-header {
+  background-color: rgba(255, 255, 255, 0.8); /* Lighter background color */
+}

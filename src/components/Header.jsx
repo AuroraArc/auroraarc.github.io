@@ -3,7 +3,7 @@ import '../assets/index.css'; // Import the CSS file
 
 const Header = ({ theme }) => {
   return (
-    <header className={`header ${theme}`}>
+    <header className={`header ${theme} lighter-header`}>
       <nav className="nav-container">
         <div className="nav-links">
           <Link to="/">Home</Link>
