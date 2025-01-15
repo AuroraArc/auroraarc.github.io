@@ -7,9 +7,9 @@ import Projects from './components/Projects';
 function App() {
   return (
     <Router>
-      <Header />
+      <Header theme={config.themeConfig.defaultTheme} />
       <Routes>
-        <Route path="/" element={<GitProfile config={config}/>} />
+        <Route path="/" element={<GitProfile config={config} />} />
         <Route path="/projects" element={<Projects />} />
       </Routes>
     </Router>

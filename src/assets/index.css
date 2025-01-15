@@ -95,7 +95,7 @@ svg {
   background-color: #f8f9fa;
   padding: 1rem;
   display: flex;
-  justify-content: center; /* Center the nav links */
+  justify-content: left;
   align-items: center;
 }
 
