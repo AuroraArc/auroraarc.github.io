@@ -10,6 +10,7 @@ const Header = ({ theme }) => {
           <Link to="/projects">Projects</Link>
         </div>
       </nav>
+      <div className="separator-bar"></div>
     </header>
   );
 };
