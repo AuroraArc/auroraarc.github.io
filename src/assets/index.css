@@ -114,11 +114,3 @@ svg {
 .header .nav-links a:hover {
   text-decoration: underline;
 }
-
-.bg-base-100 {
-  background-color: #E3E3ED; /* Adjust this color to match the background color */
-}
-
-.text-base-content {
-  color: #333; /* Adjust this color to match the font color */
-}
