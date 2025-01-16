@@ -22,7 +22,7 @@ const UnderstandingQubitFeatures = () => {
         </p>
         <h2 className="text-2xl font-bold text-base-content mt-4">Introduction</h2>
         <p className="text-base-content text-opacity-70 mt-2">
-          First, what is a quantum computer <a href="$ref1"><sup>1</sup></a>? To put it simply, it is a computer that uses quantum bits (qubits) to process information. Two notable features of a quantum computer allow it to be much more powerful than a classical computer:
+          First, what is a quantum computer [1]? To put it simply, it is a computer that uses quantum bits (qubits) to process information. Two notable features of a quantum computer allow it to be much more powerful than a classical computer:
         </p>
         <ul className="text-base-content text-opacity-70 mt-2">
           <li><strong>Superposition</strong> allows the qubit to be in a state of one and zero simultaneously</li>
@@ -145,14 +145,14 @@ const UnderstandingQubitFeatures = () => {
         </p>
         <h3 className="text-xl font-bold text-base-content mt-4">3. Correlation Matrix</h3>
         <p className="text-center">
-          <img src="https://github.com/AuroraArc/qubit-feature-analysis/blob/main/images/corrmatrix.png" alt="Correlation Matrix" />
+          <img src="./corrmatrix.png" alt="Correlation Matrix" />
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
           Some things to note from the visualization of the matrix as a heatmap are that the decoherence times (T<InlineMath math="_1" />, T<InlineMath math="_2" />) show a negative relationship across the other variables. The anharmonicity values seem to be neutral across all variables. Most notably, the probability errors ('prob meas0 prop1, prob meas1 prop0') and gate errors (Pauli-X, ECR) all show a slight relationship with each other.
         </p>
         <h3 className="text-xl font-bold text-base-content mt-4">4. ECR Plot</h3>
         <p className="text-center">
-          <img src="https://github.com/AuroraArc/qubit-feature-analysis/blob/main/images/scatterplot.png" alt="ECR Plot" />
+          <img src="./scatterplot.png" alt="ECR Plot" />
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
           The negative 'ECR error value' is attributed to feature scaling. From the graph, it is clear that there is massive variation observed between predicted and actual values, which suggests a nonlinear relationship. Some data outliers could have influenced lower evaluation metrics.
@@ -195,7 +195,7 @@ const UnderstandingQubitFeatures = () => {
         </p>
         <h2 className="text-2xl font-bold text-base-content mt-4">References</h2>
         <div className="text-base-content text-opacity-70 mt-2">
-          <p id="ref1"> “What Is Quantum Computing?” Caltech Science Exchange, <a href="https://scienceexchange.caltech.edu/topics/quantum-science-explained/quantum-computing-computers" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://scienceexchange.caltech.edu/topics/quantum-science-explained/quantum-computing-computers</a>. Accessed 6 Dec. 2023.</p>
+          <p>[1] “What Is Quantum Computing?” Caltech Science Exchange, <a href="https://scienceexchange.caltech.edu/topics/quantum-science-explained/quantum-computing-computers" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://scienceexchange.caltech.edu/topics/quantum-science-explained/quantum-computing-computers</a>. Accessed 6 Dec. 2023.</p>
           <p>[2] Preskill, John. “Quantum Computing in the NISQ Era and Beyond.” Quantum, vol. 2, Aug. 2018, p.79. Crossref, <a href="https://doi.org/10.22331/q-2018-08-06-79" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://doi.org/10.22331/q-2018-08-06-79</a>.</p>
           <p>[3] Engdahl, Sylvia. “Noise in Quantum Computing.” Amazon, Greenhaven Press/Gale, 2008, <a href="https://aws.amazon.com/blogs/quantum-computing/noise-in-quantum-computing/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://aws.amazon.com/blogs/quantum-computing/noise-in-quantum-computing/</a></p>
           <p>[4] Qiskit documentation. Version 0.45.0 <a href="https://docs.quantum.ibm.com/api/qiskit" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://docs.quantum.ibm.com/api/qiskit</a></p>
