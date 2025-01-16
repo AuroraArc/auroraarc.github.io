@@ -1,9 +1,15 @@
 import { useEffect, useState } from 'react';
 import config from '../../gitprofile.config';
 import '../assets/index.css'; // Import the CSS file
+import ProjectCard from './ProjectCard';
 
 const Projects = () => {
   const [loading, setLoading] = useState(true);
+  const projects = [
+    { title: 'Project 1', description: 'Description of project 1' },
+    { title: 'Project 2', description: 'Description of project 2' },
+    // Add more projects as needed
+  ];
 
   useEffect(() => {
     setLoading(false);
@@ -14,11 +20,16 @@ const Projects = () => {
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <div className="p-4 lg:p-10 min-h-full">
-          <h1 className="text-2xl font-bold text-base-content">Projects</h1>
-          <p className="text-base-content text-opacity-70">
+        <div className="flex flex-col items-center justify-center p-4 lg:p-10 min-h-full">
+          <h1 className="text-2xl font-bold text-base-content fade-in-title">Projects</h1>
+          <p className="text-base-content text-opacity-70 text-center">
             Here are some of my projects...
           </p>
+          <div className="projects-container">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          </div>
         </div>
       )}
     </div>
