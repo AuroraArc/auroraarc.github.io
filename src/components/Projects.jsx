@@ -12,7 +12,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className={`fade-in h-screen bg-${config.themeConfig.customTheme['base-100']}`}>
+    <div className={`fade-in h-screen bg-${config.themeConfig.customTheme['base-100']} large-bottom-margin`}>
       {loading ? (
         <div>Loading...</div>
       ) : (

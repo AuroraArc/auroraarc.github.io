@@ -3,7 +3,7 @@ import '../../assets/index.css'; // Import the CSS file
 const UnderstandingQubitFeatures = () => {
 
   return (
-    <div className="fade-in h-screen bg-base-100 p-4 lg:p-10">
+    <div className="fade-in h-screen bg-base-100 p-4 lg:p-10 large-bottom-margin">
       <h1 className="text-3xl font-bold text-base-content text-center mt-4">Understanding the Influence of Qubit Features on Error Rates</h1>
       <p className="text-base-content text-opacity-70 text-center mt-2">
         The goal of the project was to assess correlations between qubit features and ultimately predict error probability.

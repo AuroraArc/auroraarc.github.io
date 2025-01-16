@@ -273,3 +273,7 @@ li {
 strong {
   font-weight: bold;
 }
+
+.large-bottom-margin {
+  margin-bottom: 4rem; /* Adjust the value as needed */
+}
