@@ -2,7 +2,7 @@ import '../../assets/index.css'; // Import the CSS file
 
 const QMLDFT = () => {
   return (
-    <div className="fade-in h-screen bg-base-100 p-4 lg:p-10 large-bottom-margin">
+    <div className="fade-in h-screen bg-base-100 p-4 lg:p-10">
       <h1 className="text-3xl font-bold text-base-content text-center mt-4">Quantum Computing and ML for DFT Calculations in Proteins</h1>
       <p className="text-base-content text-opacity-70 text-center mt-2">
         Proposed a novel QC-ML hybrid model for accelerating DFT calculations in large molecular systems using a graph-CNN like model with a QCBM.
@@ -24,6 +24,7 @@ const QMLDFT = () => {
           The project successfully demonstrated the potential of QC-ML hybrid models in accelerating DFT calculations. Future work includes further optimization and testing.
         </p>
       </div>
+      <div className="bottom-space"></div> {}
     </div>
   );
 };
