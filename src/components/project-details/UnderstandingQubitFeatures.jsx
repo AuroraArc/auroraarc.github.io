@@ -1,6 +1,9 @@
 import '../../assets/index.css'; // Import the CSS file
 import { InlineMath, BlockMath } from 'react-katex'; // Import KaTeX components
 import 'katex/dist/katex.min.css'; // Import KaTeX CSS
+import coormatrix from './corrmatrix.png'; // Import the image
+import scatterplot from './scatterplot.png'; // Import the image
+
 
 const UnderstandingQubitFeatures = () => {
   return (
@@ -145,14 +148,14 @@ const UnderstandingQubitFeatures = () => {
         </p>
         <h3 className="text-xl font-bold text-base-content mt-4">3. Correlation Matrix</h3>
         <p className="text-center">
-          <img src="src/components/project-details/corrmatrix.png" alt="Correlation Matrix" />
+          <img src={corrmatrix} alt="Correlation Matrix" />
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
           Some things to note from the visualization of the matrix as a heatmap are that the decoherence times (T<InlineMath math="_1" />, T<InlineMath math="_2" />) show a negative relationship across the other variables. The anharmonicity values seem to be neutral across all variables. Most notably, the probability errors ('prob meas0 prop1, prob meas1 prop0') and gate errors (Pauli-X, ECR) all show a slight relationship with each other.
         </p>
         <h3 className="text-xl font-bold text-base-content mt-4">4. ECR Plot</h3>
         <p className="text-center">
-          <img src="src/components/project-details/scatterplot.png" alt="ECR Plot" />
+          <img src={scatterplot} alt="ECR Plot" />
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
           The negative 'ECR error value' is attributed to feature scaling. From the graph, it is clear that there is massive variation observed between predicted and actual values, which suggests a nonlinear relationship. Some data outliers could have influenced lower evaluation metrics.
