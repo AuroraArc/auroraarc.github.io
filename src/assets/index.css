@@ -260,3 +260,16 @@ hr {
   background: #333;
   background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
+
+ul {
+  list-style-type: disc;
+  margin-left: 1.5rem; /* Adjust the margin as needed */
+}
+
+li {
+  margin-bottom: 0.5rem; /* Adjust the spacing between list items as needed */
+}
+
+strong {
+  font-weight: bold;
+}
