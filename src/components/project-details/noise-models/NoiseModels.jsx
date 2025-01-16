@@ -1,6 +1,4 @@
 import '../../../assets/index.css'; // Import the CSS file
-import { InlineMath, BlockMath } from 'react-katex'; // Import KaTeX components
-import 'katex/dist/katex.min.css'; // Import KaTeX CSS
 import graph1 from './graph1.png';
 import graph2 from './graph2.png';
 import featureMap from './featureMap.png';
