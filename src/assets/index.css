@@ -132,7 +132,7 @@ svg {
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px; /* Increase the max-width to extend further out */
 }
 
 .project-card-container {
@@ -151,7 +151,7 @@ svg {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 100%;
+  width: 100%; /* Make the project card take full width of the container */
   min-height: 200px; /* Adjust as needed */
   border: 1px solid gray; /* Border around the project card */
   z-index: 1;
