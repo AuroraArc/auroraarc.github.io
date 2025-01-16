@@ -3,9 +3,9 @@ import GitProfile from './components/GitProfile';
 import config from '../gitprofile.config';
 import Header from './components/Header';
 import Projects from './components/Projects';
-import QuantumComputingML from './components/project-details/QuantumComputingML';
+import QMLDFT from './components/project-details/QMLDFT';
 import UnderstandingQubitFeatures from './components/project-details/UnderstandingQubitFeatures';
-import ReducingRecidivism from './components/project-details/ReducingRecidivism';
+import Recidivism from './components/project-details/Recidivism';
 
 function App() {
   return (
