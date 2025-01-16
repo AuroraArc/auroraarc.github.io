@@ -1,11 +1,6 @@
 import '../../assets/index.css'; // Import the CSS file
-import Latex from 'react-latex-next'; // Import the Latex component
 
 const UnderstandingQubitFeatures = () => {
-  const latexString = `
-    \\textbf{Superposition} allows the qubit to be in a state of one and zero simultaneously.
-    \\textbf{Entanglement} "binds" a group of qubits together; their individual states are dependent on each other, no matter how far they are from each other.
-  `;
 
   return (
     <div className="fade-in h-screen bg-base-100 p-4 lg:p-10">
