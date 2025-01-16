@@ -150,9 +150,9 @@ svg {
 .projects-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  width: 66.67%; /* 2/3 of the screen width */
-  max-width: 1200px; /* Adjust as needed */
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px;
 }
 
 .project-card-container {
@@ -163,16 +163,21 @@ svg {
 }
 
 .project-card {
-  background-color: #add8e6; /* Light blue color */
-  padding: 2rem; /* Increase padding */
+  background-color: #f0f0f0;
+  padding: 1rem;
   border-radius: 0.5rem;
-  transition: transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   border: 2px solid #5f9ea0; /* Border around the project card */
   z-index: 1;
+}
+
+.project-card:hover {
+  background-color: #add8e6; /* Light blue color on hover */
+  transform: translateX(10px); /* Move the card slightly to the right */
 }
 
 .project-card-hover {
@@ -194,7 +199,7 @@ svg {
 }
 
 .project-title {
-  font-size: 1.5rem; /* Increase font size */
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
@@ -205,5 +210,9 @@ svg {
 
 .project-arrow {
   font-size: 1.5rem;
-  color: white;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-arrow {
+  transform: translateX(10px); /* Move the arrow outward on hover */
 }

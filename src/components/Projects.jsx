@@ -20,9 +20,9 @@ const Projects = () => {
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <div className="flex flex-col items-center justify-center p-4 lg:p-10 min-h-full">
-          <h1 className="text-2xl font-bold text-base-content fade-in-title text-center mt-4">Projects</h1>
-          <p className="text-base-content text-opacity-70 text-center mb-8">
+        <div className="flex flex-col justify-center p-4 lg:p-10 min-h-full">
+          <h1 className="text-2xl font-bold text-base-content fade-in-title">Projects</h1>
+          <p className="text-base-content text-opacity-70 text-center">
             Here are some of my projects...
           </p>
           <div className="projects-container">
