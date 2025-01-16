@@ -40,7 +40,7 @@ const MusicGen = () => {
         <h2 className="text-2xl font-bold text-base-content mt-4">Discussion</h2>
         <h3 className="text-xl font-bold text-base-content mt-4">1. Implications for Music Generation</h3>
         <p className="text-base-content text-opacity-70 mt-2">
-          The results of this project demonstrate the potential of Performer for music generation. The model is able to generate high-quality music sequences while reducing the computational complexity of attention mechanisms.
+          The results of this project demonstrate the potential of Performer for music generation (of course). The model is able to generate high-quality music sequences while reducing the computational complexity of attention mechanisms.
         </p>
         <h3 className="text-xl font-bold text-base-content mt-4">2. Future Work</h3>
         <p className="text-base-content text-opacity-70 mt-2">
