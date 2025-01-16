@@ -151,7 +151,7 @@ svg {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border: 2px solid #5f9ea0; /* Border around the project card */
+  border: 1px solid gray; /* Border around the project card */
   z-index: 1;
 }
 
