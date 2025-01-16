@@ -17,7 +17,7 @@ const Projects = () => {
         <div>Loading...</div>
       ) : (
         <div className="flex flex-col items-center p-4 lg:p-10 min-h-full">
-          <h1 className="text-3xl font-bold text-base-content text-center mt-4 projects-title">Projects</h1>
+          <h1 className="text-3xl font-bold text-base-content text-center projects-title">Projects</h1>
           <p className="text-base-content text-opacity-70 text-center mt-2">
           </p>
           <div className="projects-container mt-6">
