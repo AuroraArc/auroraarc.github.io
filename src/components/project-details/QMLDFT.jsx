@@ -25,7 +25,6 @@ const QMLDFT = () => {
         </p>
       </div>
     </div>
-    
   );
 };
 
