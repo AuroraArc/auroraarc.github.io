@@ -275,5 +275,9 @@ strong {
 }
 
 .large-bottom-margin {
-  margin-bottom: 4rem !important; /* Force the margin to be applied */
+  margin-bottom: 4rem; /* Force the margin to be applied */
+}
+
+.bottom-space {
+  height: 4rem; /* Adjust the height as needed */
 }
