@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import GitProfile from './components/GitProfile';
 import config from '../gitprofile.config';
 import Header from './components/Header';
 import Projects from './components/Projects';
-import QMLDFT from './components/project-details/qmldft/QMLDFT';
+import QMLDFT from './components/project-details/qmlft/QMLDFT';
 import NoiseModels from './components/project-details/noise-models/NoiseModels';
 import UnderstandingQubitFeatures from './components/project-details/qubit-features/UnderstandingQubitFeatures';
 import Recidivism from './components/project-details/recidivism/Recidivism';
@@ -22,6 +24,8 @@ function App() {
         <Route path="/projects/understanding-the-influence-of-qubit-features-on-error-rates" element={<UnderstandingQubitFeatures />} />
         <Route path="/projects/breaking-the-cycle:-reducing-recidivism-in-iowa-state-prisons" element={<Recidivism />} />
       </Routes>
+      <Analytics />
+      <SpeedInsights />
     </Router>
   );
 }
