@@ -151,10 +151,12 @@ svg {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 150%; /* Adjust width as needed */
+  width: 100%;
   min-height: 200px; /* Adjust as needed */
   border: 1px solid gray; /* Border around the project card */
   z-index: 1;
+  text-decoration: none; /* Remove underline from link */
+  color: inherit; /* Inherit text color */
 }
 
 .project-card:hover {
@@ -198,4 +200,24 @@ svg {
 
 .project-card:hover .project-arrow {
   transform: translateX(10px); /* Move the arrow outward on hover */
+}
+
+.project-detail {
+  padding: 2rem;
+  background-color: var(--base-100);
+}
+
+.project-detail img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.project-detail a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.project-detail a:hover {
+  text-decoration: underline;
 }

@@ -5,11 +5,7 @@ import ProjectCard from './ProjectCard';
 
 const Projects = () => {
   const [loading, setLoading] = useState(true);
-  const projects = [
-    { title: 'Project 1', description: 'Description of project 1' },
-    { title: 'Project 2', description: 'Description of project 2' },
-    // Add more projects as needed
-  ];
+  const projects = config.externalProjects;
 
   useEffect(() => {
     setLoading(false);
