@@ -49,13 +49,13 @@ const NoiseModels = () => {
           To be able to train a quantum model using Qiskit's VQC [4], we must first take the calssical data and transofmr it into a format that can be represented by qubits using a feature map. In this example, the <em>ZZFeatureMap</em> is shown, which applies a Hadamard gate to each qubit, followed by a series of controlled-Z gates that create entanglement between the qubits.
         </p>
         <p className="text-center">
-            <img src={featureMap} alt="Feature Map" className="mx-auto my-4" style={{ width: '500px', height: '300px' }} />
+            <img src={featureMap} alt="Feature Map" className="mx-auto my-4" style={{ width: '800px', height: '150px' }} />
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
             After the data has been transformed, we need to apply an ansatz, which is analogous to the neural layers in a classical neural network. The ansatz is a series of quantum gates that are applied to the qubits to perform computations. In this example, the <em>EfficientSU2</em> ansatz is used, which is a parameterized circuit that can be optimized to minimize the loss function. It consists of a series of single-qubit rotation about the Y and Z axes and controlled-Z gates.
         </p>
         <p className="text-center">
-            <img src={ansatz} alt="Ansatz" className="mx-auto my-4" style={{ width: '500px', height: '300px' }} />
+            <img src={ansatz} alt="Ansatz" className="mx-auto my-4" style={{ width: '800px', height: '200px' }} />
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
             Finally, we ned to choose an optimization algorithm to use. I chose the Nakanishi-Fujii-Todo (NFT) [5] algorithm, which has these key features:
