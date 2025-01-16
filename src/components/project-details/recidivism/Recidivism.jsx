@@ -27,10 +27,10 @@ const Recidivism = () => {
           <li>Expand Education and Counseling in Maximum Security Prisons: Provide more educational and counseling opportunities to equip inmates with skills and support for successful reintegration into society.</li>
           <li>Develop Post-Release Programs for At-Risk Inmates: Focus on creating support systems for inmates identified as high-risk for recidivism to facilitate their transition back into the community.</li>
         </ul>
+        <p className="text-base-content text-opacity-70 mt-2">
+          These recommendations aim to reduce recidivism rates and alleviate the financial and social costs associated with repeat offenses in Iowa.
+        </p>
       </div>
-      <p className="text-base-content text-opacity-70 mt-2">
-        These recommendations aim to reduce recidivism rates and alleviate the financial and social costs associated with repeat offenses in Iowa.
-      </p>
       <div className="bottom-space"></div> {/* Add this div */}
     </div>
   );
