@@ -18,11 +18,11 @@ const UnderstandingQubitFeatures = () => {
       <div className="project-content mt-6 mx-auto max-w-screen-lg">
         <h2 className="text-2xl font-bold text-base-content mt-4">Abstract</h2>
         <p className="text-base-content text-opacity-70 mt-2">
-          The goal of this project is to assess correlations between qubit features and ultimately predict error probability. In the context of quantum computing, quantum bits (qubits) serve as the fundamental units for information processing, comparable to classical bits in conventional computers that store and process data using 1s and 0s. Quantum gates, analogous to classical logic gates such as NOT and OR, are employed to manipulate qubit states. The project involved the application of time series analysis to examine 7-qubit systems, notably 'ibm_perth', over a span of 315 days. Additionally, normal regression analysis was conducted for 127-qubit systems over a one-day period, instead treating each individual qubit as a data point, encompassing seven unique systems. Evaluation of prediction accuracy was carried out using root mean square error (RMSE) and R-squared (R2), common regression techniques. The results indicate a limited predictive capability of qubit features in relation to error rates when employing linear and low-order polynomials. Notably, a stronger correlation was noted across qubits compared to across time. Future exploration involves investigating the discrepancy between the correlation matrix and the error coefficients, and a comprehensive understanding of the relationship between qubit features and error rates may enhance error mitigation when integrated with existing models.
+          The goal of this project is to assess correlations between qubit features and ultimately predict error probability. In the context of quantum computing, quantum bits (qubits) serve as the fundamental units for information processing, comparable to classical bits in conventional computers that store and process data using 1s and 0s. Quantum gates, analogous to classical logic gates such as NOT and OR, are employed to manipulate qubit states. The project involved the application of time series analysis to examine 7-qubit systems, notably 'ibm_perth', over a span of 315 days. Additionally, normal regression analysis was conducted for 127-qubit systems over a one-day period, instead treating each individual qubit as a data point, encompassing seven unique systems. Evaluation of prediction accuracy was carried out using root mean square error (RMSE) and R-squared (<InlineMath math="R^2" />), common regression techniques. The results indicate a limited predictive capability of qubit features in relation to error rates when employing linear and low-order polynomials. Notably, a stronger correlation was noted across qubits compared to across time. Future exploration involves investigating the discrepancy between the correlation matrix and the error coefficients, and a comprehensive understanding of the relationship between qubit features and error rates may enhance error mitigation when integrated with existing models.
         </p>
         <h2 className="text-2xl font-bold text-base-content mt-4">Introduction</h2>
         <p className="text-base-content text-opacity-70 mt-2">
-          First, what is a quantum computer [1]? To put it simply, it is a computer that uses quantum bits (qubits) to process information. Two notable features of a quantum computer allow it to be much more powerful than a classical computer:
+          First, what is a quantum computer <a href="$ref1"><sup>1</sup></a>? To put it simply, it is a computer that uses quantum bits (qubits) to process information. Two notable features of a quantum computer allow it to be much more powerful than a classical computer:
         </p>
         <ul className="text-base-content text-opacity-70 mt-2">
           <li><strong>Superposition</strong> allows the qubit to be in a state of one and zero simultaneously</li>
@@ -116,9 +116,9 @@ const UnderstandingQubitFeatures = () => {
         </p>
         <h4 className="text-lg font-bold text-base-content mt-4">1.2 Model Performance Metrics</h4>
         <ul className="list-disc list-inside text-base-content text-opacity-70 mt-2">
-          <li>Average R<InlineMath math="^2" /> score <InlineMath math="\approx -1.252" /></li>
+          <li>Average <InlineMath math="R^2" /> score <InlineMath math="\approx -1.252" /></li>
           <li>The model performs worse than just using the average of the predicted value as a prediction.</li>
-          <li>Optimal R<InlineMath math="^2" /> score = <InlineMath math="1" /></li>
+          <li>Optimal <InlineMath math="R^2" /> score = <InlineMath math="1" /></li>
           <li>Average RMSE score <InlineMath math="\approx 4.319\times 10^{-3}" /></li>
           <li>The inconclusive nature of the RMSE results is attributed to the small range of values.</li>
           <li>Optimal RMSE score = <InlineMath math="0" /></li>
@@ -134,7 +134,7 @@ const UnderstandingQubitFeatures = () => {
         </p>
         <h4 className="text-lg font-bold text-base-content mt-4">2.2 Model Performance Metrics</h4>
         <ul className="list-disc list-inside text-base-content text-opacity-70 mt-2">
-          <li>Average R<InlineMath math="^2" /> score <InlineMath math="\approx 0.105" /></li>
+          <li>Average <InlineMath math="R^2" /> score <InlineMath math="\approx 0.105" /></li>
           <li>The model exhibits weak predictive power but performs better than the time series analysis.</li>
           <li>Average RMSE score <InlineMath math="\approx 0.900" /></li>
           <li>The very poor RMSE score is noted due to the small range of values.</li>
@@ -195,7 +195,7 @@ const UnderstandingQubitFeatures = () => {
         </p>
         <h2 className="text-2xl font-bold text-base-content mt-4">References</h2>
         <div className="text-base-content text-opacity-70 mt-2">
-          <p>[1] “What Is Quantum Computing?” Caltech Science Exchange, <a href="https://scienceexchange.caltech.edu/topics/quantum-science-explained/quantum-computing-computers" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://scienceexchange.caltech.edu/topics/quantum-science-explained/quantum-computing-computers</a>. Accessed 6 Dec. 2023.</p>
+          <p id="ref1"> “What Is Quantum Computing?” Caltech Science Exchange, <a href="https://scienceexchange.caltech.edu/topics/quantum-science-explained/quantum-computing-computers" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://scienceexchange.caltech.edu/topics/quantum-science-explained/quantum-computing-computers</a>. Accessed 6 Dec. 2023.</p>
           <p>[2] Preskill, John. “Quantum Computing in the NISQ Era and Beyond.” Quantum, vol. 2, Aug. 2018, p.79. Crossref, <a href="https://doi.org/10.22331/q-2018-08-06-79" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://doi.org/10.22331/q-2018-08-06-79</a>.</p>
           <p>[3] Engdahl, Sylvia. “Noise in Quantum Computing.” Amazon, Greenhaven Press/Gale, 2008, <a href="https://aws.amazon.com/blogs/quantum-computing/noise-in-quantum-computing/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://aws.amazon.com/blogs/quantum-computing/noise-in-quantum-computing/</a></p>
           <p>[4] Qiskit documentation. Version 0.45.0 <a href="https://docs.quantum.ibm.com/api/qiskit" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://docs.quantum.ibm.com/api/qiskit</a></p>
