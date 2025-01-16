@@ -51,7 +51,7 @@ const UnderstandingQubitFeatures = () => {
         </ul>
         <h2 className="text-2xl font-bold text-base-content mt-4">Methods</h2>
         <h3 className="text-xl font-bold text-base-content mt-4">1. Data Collection</h3>
-        <h4 className="text-lg font-bold text-base-content mt-4">1.1 Qsikit SDK and IBM Machines</h4>
+        <h4 className="text-lg font-bold text-base-content mt-4">1.1 Qiskit SDK and IBM Machines</h4>
         <p className="text-base-content text-opacity-70 mt-2">
           For data collection, I utilized the Qiskit SDK [4], which provided access to IBM quantum computers.
         </p>

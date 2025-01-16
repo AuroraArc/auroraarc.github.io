@@ -1,8 +1,8 @@
 import '../../../assets/index.css'; // Import the CSS file
 import { InlineMath, BlockMath } from 'react-katex'; // Import KaTeX components
 import 'katex/dist/katex.min.css'; // Import KaTeX CSS
-import noiseImpact from './noiseImpact.png'; // Import the image
-import noiseGraph from './noiseGraph.png'; // Import the image
+// import noiseImpact from './noiseImpact.png'; // Import the image
+// import noiseGraph from './noiseGraph.png'; // Import the image
 
 const NoiseModels = () => {
   return (
@@ -54,14 +54,14 @@ const NoiseModels = () => {
         <h2 className="text-2xl font-bold text-base-content mt-4">Results</h2>
         <h3 className="text-xl font-bold text-base-content mt-4">1. Impact of Noise on Accuracy</h3>
         <p className="text-center">
-          <img src={noiseImpact} alt="Impact of Noise on Accuracy" className="mx-auto my-4" style={{ width: '500px', height: '300px' }} />
+          {/* <img src={noiseImpact} alt="Impact of Noise on Accuracy" className="mx-auto my-4" style={{ width: '500px', height: '300px' }} /> */}
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
           The results show that noise significantly impacts the accuracy of quantum classifiers. Depolarizing noise had the most severe effect, followed by amplitude damping and phase damping.
         </p>
         <h3 className="text-xl font-bold text-base-content mt-4">2. Noise Analysis Graph</h3>
         <p className="text-center">
-          <img src={noiseGraph} alt="Noise Analysis Graph" className="mx-auto my-4" style={{ width: '500px', height: '300px' }} />
+          {/* <img src={noiseGraph} alt="Noise Analysis Graph" className="mx-auto my-4" style={{ width: '500px', height: '300px' }} /> */}
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
           The graph illustrates the relationship between noise levels and classifier performance. As noise levels increase, the performance of the classifiers deteriorates.
