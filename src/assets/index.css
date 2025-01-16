@@ -240,7 +240,7 @@ svg {
 }
 
 .project-content p {
-  text-align: justify; /* Justify text */
+  text-align: left; /* Align text to the left */
 }
 
 .italic-opacity {
