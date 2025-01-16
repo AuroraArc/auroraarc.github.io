@@ -1,9 +1,10 @@
 import '../../assets/index.css'; // Import the CSS file
-import Latex from 'react-latex-next'; // Import the Latex component
+import { InlineMath, BlockMath } from 'react-katex'; // Import KaTeX components
+import 'katex/dist/katex.min.css'; // Import KaTeX CSS
 
 const UnderstandingQubitFeatures = () => {
   return (
-    <div className="fade-in h-screen bg-base-100 p-4 lg:p-10 large-bottom-margin">
+    <div className="fade-in h-screen bg-base-100 p-4 lg:p-10">
       <h1 className="text-3xl font-bold text-base-content text-center mt-4">Understanding the Influence of Qubit Features on Error Rates</h1>
       <p className="text-base-content text-opacity-70 text-center mt-2">
         The goal of the project was to assess correlations between qubit features and ultimately predict error probability.
@@ -82,14 +83,14 @@ const UnderstandingQubitFeatures = () => {
           LASSO Regression was employed for its simplicity and feature selection capabilities [6].
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
-          <Latex>{`$$\\min_{w} { \\frac{1}{2n_{\\text{samples}}} ||w - y||_2 ^ 2 + \\alpha ||w||_1}$$`}</Latex>
+          <BlockMath math="\min_{w} { \frac{1}{2n_{\text{samples}}} ||w - y||_2 ^ 2 + \alpha ||w||_1}" />
         </p>
         <ul className="text-base-content text-opacity-70 mt-2">
-          <li><Latex inline>{`$$n_{\\text{samples}}$$`}</Latex>: number of samples</li>
-          <li><Latex inline>{`$$X$$`}</Latex>: input features (independent variables)</li>
-          <li><Latex inline>{`$$y$$`}</Latex>: target value (in this case, CNOT error)</li>
-          <li><Latex inline>{`$$w$$`}</Latex>: coefficient vector</li>
-          <li><Latex inline>{`$$\\alpha ||w||_1$$`}</Latex>: LASSO regularization</li>
+          <li><InlineMath math="n_{\text{samples}}" />: number of samples</li>
+          <li><InlineMath math="X" />: input features (independent variables)</li>
+          <li><InlineMath math="y" />: target value (in this case, CNOT error)</li>
+          <li><InlineMath math="w" />: coefficient vector</li>
+          <li><InlineMath math="\alpha ||w||_1" />: LASSO regularization</li>
         </ul>
         <h4 className="text-lg font-bold text-base-content mt-4">3.2 Polynomial Regression</h4>
         <p className="text-base-content text-opacity-70 mt-2">
