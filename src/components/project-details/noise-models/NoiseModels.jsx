@@ -27,7 +27,7 @@ const NoiseModels = () => {
           Quantum computing offers an exponential speedup for certain tasks when compared to classical computing. However, it has many limitations that inhibit it to perform to its theoretical power. One major aspect is the impact of noise on quantum models, which degrades performance and accuracy.
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
-            What is quantum noise? Quantum noise referes to the fluctuations quantum systems have that arise due to disturbances that can affect the behavior and properties qubits have. Common types of noise include:
+            What is quantum noise? Quantum noise refers to the fluctuations quantum systems have that arise due to disturbances that can affect the behavior and properties qubits have. Common types of noise include:
         </p>
         <ul className="text-base-content text-opacity-70 mt-2">
             <li><strong>Environmental Noise</strong>: Includes thermal fluctuations or local radiation from cell phones</li>
