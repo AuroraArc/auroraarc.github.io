@@ -97,7 +97,7 @@ const config = {
     {
       title: 'Breaking the Cycle: Reducing Recidivism in Iowa State Prisons',
       description:
-        'Analysis of the recidivm cycle and the impact of various factors on recidivism rates.',
+        'Analysis of the recidivism cycle and the impact of various factors on recidivism rates.',
       imageUrl: 'https://static.vecteezy.com/system/resources/previews/005/720/400/non_2x/prison-icon-jail-illustration-isolated-on-white-background-free-vector.jpg',
       // link: 'https://www.soa.org/49c692/globalassets/assets/files/static-pages/research/arch/2023/arch-2023-2-breaking-the-cycle-reducing-recidivism.pdf',
 
