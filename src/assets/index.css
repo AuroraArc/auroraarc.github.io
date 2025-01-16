@@ -168,6 +168,14 @@ svg {
 
 .project-card-hover {
   position: absolute;
+}
+
+.projects-title {
+  margin-bottom: 2rem; /* Adjust the value to create a wider gap */
+}
+
+.project-card-hover {
+  position: absolute;
   top: 0;
   right: -50px; /* Adjust as needed */
   height: 100%;
