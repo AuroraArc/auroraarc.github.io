@@ -46,7 +46,7 @@ const NoiseModels = () => {
         </p>
         <h3 className="text-xl font-bold text-base-content mt-4">2. Quantum Preprocessing</h3>
         <p className="text-base-content text-opacity-70 mt-2">
-          To be able to train a quantum model using Qiskit's VQC [4], we must first take the calssical data and transofmr it into a format that can be represented by qubits using a feature map. In this example, the <em>ZZFeatureMap</em> is shown, which applies a Hadamard gate to each qubit, followed by a series of controlled-Z gates that create entanglement between the qubits.
+          To be able to train a quantum model using Qiskit's VQC [4], we must first take the classical data and transform it into a format that can be represented by qubits using a feature map. In this example, the <em>ZZFeatureMap</em> is shown, which applies a Hadamard gate to each qubit, followed by a series of controlled-Z gates that create entanglement between the qubits.
         </p>
         <p className="text-center">
             <img src={featureMap} alt="Feature Map" className="mx-auto my-4" style={{ width: '800px', height: '150px' }} />
@@ -63,7 +63,7 @@ const NoiseModels = () => {
         <ul className="text-base-content text-opacity-70 mt-2">
             <li>Divides optimization problem into solvable subproblems by considering subset of parameters</li>
             <li>Hyperparameter-free, which means no tuning</li>
-            <li>Designed to cnoerge faster than other optimization algorithms</li>
+            <li>Designed to converge faster than other optimization algorithms</li>
         </ul>
         <h3 className="text-xl font-bold text-base-content mt-4">3. Designing Noise Models</h3>
         <p className="text-base-content text-opacity-70 mt-2">
@@ -98,7 +98,7 @@ const NoiseModels = () => {
         </p>
         <h2 className="text-2xl font-bold text-base-content mt-4">Discussion</h2>
         <p className="text-base-content text-opacity-70 mt-2">
-          The slight increase discovered in the amplitude damping model is an interesting oberservation, as it suggests that a small amount of noise may actually be beneficial for quantum models. However, more research is needed to determine the statistical significance of this finding. The model could just be overfitting to the noise or simply just randomness.
+          The slight increase discovered in the amplitude damping model is an interesting observation, as it suggests that a small amount of noise may actually be beneficial for quantum models. However, more research is needed to determine the statistical significance of this finding. The model could just be overfitting to the noise or simply just randomness.
         </p>
         <h3 className="text-xl font-bold text-base-content mt-4">1. Limitations</h3>
         <p className="text-base-content text-opacity-70 mt-2">
