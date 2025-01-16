@@ -1,4 +1,4 @@
-import '.../assets/index.css'; // Import the CSS file
+import '../assets/index.css'; // Import the CSS file
 
 const QMLDFT = () => {
   return (
@@ -25,6 +25,7 @@ const QMLDFT = () => {
         </p>
       </div>
     </div>
+    
   );
 };
 
