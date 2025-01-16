@@ -20,12 +20,12 @@ const Projects = () => {
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <div className="flex flex-col justify-center p-4 lg:p-10 min-h-full">
-          <h1 className="text-2xl font-bold text-base-content fade-in-title">Projects</h1>
-          <p className="text-base-content text-opacity-70 text-center">
+        <div className="flex flex-col items-center p-4 lg:p-10 min-h-full">
+          <h1 className="text-2xl font-bold text-base-content text-center mt-4">Projects</h1>
+          <p className="text-base-content text-opacity-70 text-center mt-2">
             Here are some of my projects...
           </p>
-          <div className="projects-container">
+          <div className="projects-container mt-6">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
