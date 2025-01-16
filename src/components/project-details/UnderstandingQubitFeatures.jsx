@@ -1,7 +1,7 @@
 import '../../assets/index.css'; // Import the CSS file
 import { InlineMath, BlockMath } from 'react-katex'; // Import KaTeX components
 import 'katex/dist/katex.min.css'; // Import KaTeX CSS
-import coormatrix from './corrmatrix.png'; // Import the image
+import corrmatrix from './corrmatrix.png'; // Import the image
 import scatterplot from './scatterplot.png'; // Import the image
 
 
