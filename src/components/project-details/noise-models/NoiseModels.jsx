@@ -38,6 +38,7 @@ const NoiseModels = () => {
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
             So, what about adding noise to quantum models? While this seems counterintuitive, this is an actual phenomenon called <em>stochastic resonance</em> [1,6], where the addition of random noise actually enhances a system's response to weak signals or inputs. Think of it being analogous to the classical form of regularization, where random noise helps prevent overfitting and improves generalization.
+        </p>
         <p className="text-base-content text-opacity-70 mt-2">
           This project aims to quantify the impact of these noise sources on the performance of quantum classifiers.
         </p>
