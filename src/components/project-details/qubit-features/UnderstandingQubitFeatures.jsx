@@ -1,4 +1,4 @@
-import '../../assets/index.css'; // Import the CSS file
+import '../../../assets/index.css'; // Import the CSS file
 import { InlineMath, BlockMath } from 'react-katex'; // Import KaTeX components
 import 'katex/dist/katex.min.css'; // Import KaTeX CSS
 import corrmatrix from './corrmatrix.png'; // Import the image
