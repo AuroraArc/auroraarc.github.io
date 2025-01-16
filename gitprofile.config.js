@@ -87,18 +87,23 @@ const config = {
       description:
         'Proposed a novel QC-ML hybrid model for accelerating DFT calculations in large molecular systems using a graph-CNN like model with a QCBM.',
       imageUrl: 'https://lh3.googleusercontent.com/1xoO5BAUUU8kLns4myMNnKw6RRQyUk1JdlWL1M0aDiagMgaBeDA9O8Y4rYFAo9hfnzmb0cnUMrT_-cStBqnyp_zW59F5Edwbvxcy3EVmfeKS-PNgVw=w1072-h603-n-nu-rw',
+      link: 'https://hyu9.vercel.app/projects/quantum-computing-and-ml-for-dft-calculations-in-proteins',
     },
     {
       title: 'Understanding the Influence of Qubit Features on Error Rates',
       description:
         'The goal of the project was to assess correlations between qubit features and ultimately predict error probability.',
       imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Bloch_sphere.svg',
+      link: 'https://hyu9.vercel.app/projects/understanding-the-influence-of-qubit-features-on-error-rates',
     },
     {
       title: 'Breaking the Cycle: Reducing Recidivism in Iowa State Prisons',
       description:
         'Analysis of the recidivm cycle and the impact of various factors on recidivism rates.',
       imageUrl: 'https://static.vecteezy.com/system/resources/previews/005/720/400/non_2x/prison-icon-jail-illustration-isolated-on-white-background-free-vector.jpg',
+      link: 'https://hyu9.vercel.app/projects/breaking-the-cycle:-reducing-recidivism-in-iowa-state-prisons',
+      // link: 'https://www.soa.org/49c692/globalassets/assets/files/static-pages/research/arch/2023/arch-2023-2-breaking-the-cycle-reducing-recidivism.pdf',
+
     },
     // Add more projects as needed
   ],
