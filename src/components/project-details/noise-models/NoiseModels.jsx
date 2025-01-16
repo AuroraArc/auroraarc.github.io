@@ -88,6 +88,7 @@ const NoiseModels = () => {
         <h3 className="text-xl font-bold text-base-content mt-4">Amplitude Damping Noise Model</h3>
         <p className="text-base-content text-opacity-70 mt-2">
             Initial results suggests that a small amount of amplitude damping noise might actually increase the performance of a quantum machine learning algorithm, but we have yet to evaluate potential statistical significance.
+        </p>
         <p className="text-center">
           <img src={graph1} alt="Graph 1" className="mx-auto my-4" style={{ width: '500px', height: '300px' }} />
         </p>
