@@ -1,8 +1,10 @@
 import '../../../assets/index.css'; // Import the CSS file
 import { InlineMath, BlockMath } from 'react-katex'; // Import KaTeX components
 import 'katex/dist/katex.min.css'; // Import KaTeX CSS
-// import noiseImpact from './noiseImpact.png'; // Import the image
-// import noiseGraph from './noiseGraph.png'; // Import the image
+import graph1 from './graph1.png';
+import graph2 from './graph2.png';
+import featureMap from './featureMap.png';
+import ansatz from './ansatz.png';
 
 const NoiseModels = () => {
   return (
@@ -39,51 +41,89 @@ const NoiseModels = () => {
         <p className="text-base-content text-opacity-70 mt-2">
             So, what about adding noise to quantum models? While this seems counterintuitive, this is an actual phenomenon called <em>stochastic resonance</em> [1,6], where the addition of random noise actually enhances a system's response to weak signals or inputs. Think of it being analogous to the classical form of regularization, where random noise helps prevent overfitting and improves generalization.
         </p>
-        <p className="text-base-content text-opacity-70 mt-2">
-          This project aims to quantify the impact of these noise sources on the performance of quantum classifiers.
-        </p>
         <h2 className="text-2xl font-bold text-base-content mt-4">Methods</h2>
-        <h3 className="text-xl font-bold text-base-content mt-4">1. Noise Models</h3>
+        <h3 className="text-xl font-bold text-base-content mt-4">1. Classical Training</h3>
         <p className="text-base-content text-opacity-70 mt-2">
-          Various noise models were applied to simulate the impact of noise on quantum classifiers. These models include depolarizing noise, amplitude damping, and phase damping [2].
+          To begin, we need a classical model to compare the quantum model to. Using scikit-learn's SVC [2], we can train the classifier ona well-known dataset: the Iris dataset [3]. This dataset includes 150 samples of iris flowers, with 50 samples from each of the three species: setosa, versicolor, and virginica. 
         </p>
-        <h3 className="text-xl font-bold text-base-content mt-4">2. Quantum Classifiers</h3>
+        <h3 className="text-xl font-bold text-base-content mt-4">2. Quantum Preprocessing</h3>
         <p className="text-base-content text-opacity-70 mt-2">
-          Quantum classifiers were implemented using the Qiskit framework [3]. The classifiers were trained and tested under different noise conditions to evaluate their performance.
+          To be able to train a quantum model using Qiskit's VQC [4], we must first take the calssical data and transofmr it into a format that can be represented by qubits using a feature map. In this example, the <em>ZZFeatureMap</em> is shown, which applies a Hadamard gate to each qubit, followed by a series of controlled-Z gates that create entanglement between the qubits.
         </p>
+        <p className="text-center">
+            <img src={featureMap} alt="Feature Map" className="mx-auto my-4" style={{ width: '500px', height: '300px' }} />
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+            After the data has been transformed, we need to apply an ansatz, which is analogous to the neural layers in a classical neural network. The ansatz is a series of quantum gates that are applied to the qubits to perform computations. In this example, the <em>EfficientSU2</em> ansatz is used, which is a parameterized circuit that can be optimized to minimize the loss function. It consists of a series of single-qubit rotation about the Y and Z axes and controlled-Z gates.
+        </p>
+        <p className="text-center">
+            <img src={ansatz} alt="Ansatz" className="mx-auto my-4" style={{ width: '500px', height: '300px' }} />
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+            Finally, we ned to choose an optimization algorithm to use. I chose the Nakanishi-Fujii-Todo (NFT) [5] algorithm, which has these key features:
+        </p>
+        <ul className="text-base-content text-opacity-70 mt-2">
+            <li>Divides optimization problem into solvable subproblems by considering subset of parameters</li>
+            <li>Hyperparameter-free, which means no tuning</li>
+            <li>Designed to cnoerge faster than other optimization algorithms</li>
+        </ul>
+        <h3 className="text-xl font-bold text-base-content mt-4">3. Designing Noise Models</h3>
+        <p className="text-base-content text-opacity-70 mt-2">
+            Using artificial noise models, we can pinpoint what sort of gates can actually improve the accuracy of the model.
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+            There are a few noise models to consider:
+        </p>
+        <ul className="text-base-content text-opacity-70 mt-2">
+            <li>noiseless</li>
+            <li>bit-flip</li>
+            <li>amplitude damping</li>
+            <li>depolarizing</li>
+            <li>readout</li>
+            <li>amplitude damping and depolarizing</li>
+            <li>multi-qubit gates only (CX and ECR)</li>
+            <li>some combination of all</li>
+        </ul>
         <h2 className="text-2xl font-bold text-base-content mt-4">Results</h2>
-        <h3 className="text-xl font-bold text-base-content mt-4">1. Impact of Noise on Accuracy</h3>
+        <h3 className="text-xl font-bold text-base-content mt-4">Amplitude Damping Noise Model</h3>
+        <p className="text-base-content text-opacity-70 mt-2">
+            Initial results suggests that a small amount of amplitude damping noise might actually increase the performance of a quantum machine learning algorithm, but we have yet to evaluate potential statistical significance.
         <p className="text-center">
-          {/* <img src={noiseImpact} alt="Impact of Noise on Accuracy" className="mx-auto my-4" style={{ width: '500px', height: '300px' }} /> */}
+          <img src={graph1} alt="Graph 1" className="mx-auto my-4" style={{ width: '500px', height: '300px' }} />
+        </p>
+        <p className="text-center">
+            <img src={graph2} alt="Graph 2" className="mx-auto my-4" style={{ width: '500px', height: '300px' }} />
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
-          The results show that noise significantly impacts the accuracy of quantum classifiers. Depolarizing noise had the most severe effect, followed by amplitude damping and phase damping.
-        </p>
-        <h3 className="text-xl font-bold text-base-content mt-4">2. Noise Analysis Graph</h3>
-        <p className="text-center">
-          {/* <img src={noiseGraph} alt="Noise Analysis Graph" className="mx-auto my-4" style={{ width: '500px', height: '300px' }} /> */}
-        </p>
-        <p className="text-base-content text-opacity-70 mt-2">
-          The graph illustrates the relationship between noise levels and classifier performance. As noise levels increase, the performance of the classifiers deteriorates.
+          As expected, the empirical data shows that hight levels of noise ultimately reduce performance, with an increasing downward slope as error probability increases, signifying a significant decrease in performance. However, it is interesting to note that around 2% error probability, the performance of the model experiences a slight increase before decreasing again.
         </p>
         <h2 className="text-2xl font-bold text-base-content mt-4">Discussion</h2>
-        <h3 className="text-xl font-bold text-base-content mt-4">1. Implications of Noise on Quantum Computing</h3>
         <p className="text-base-content text-opacity-70 mt-2">
-          The analysis highlights the need for effective noise mitigation strategies in quantum computing. Understanding the impact of different noise models can help in designing robust quantum algorithms and error correction techniques.
+          The slight increase discovered in the amplitude damping model is an interesting oberservation, as it suggests that a small amount of noise may actually be beneficial for quantum models. However, more research is needed to determine the statistical significance of this finding. The model could just be overfitting to the noise or simply just randomness.
+        </p>
+        <h3 className="text-xl font-bold text-base-content mt-4">1. Limitations</h3>
+        <p className="text-base-content text-opacity-70 mt-2">
+            The VQC used in this project were only tested on very simple noise models. Current real backends experience a much more complex set of noise. Additionally, the experiments were not run on a live quantum device; rather, they were run on a simulator. This means that the results may not be representative of what would happen on a real quantum device.
         </p>
         <h3 className="text-xl font-bold text-base-content mt-4">2. Future Work</h3>
         <p className="text-base-content text-opacity-70 mt-2">
-          Future work includes exploring advanced noise mitigation techniques and testing the models on larger quantum systems. Additionally, integrating machine learning approaches to predict and compensate for noise effects can be a promising direction.
+          Future work includes analyzing the slight bump in score performance and determining the optimal balance that maximizes performance while minimizing complexity when creating a noise model. Additionally, the experiments should be run on a real quantum device to see how the results differ from the simulator.
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+            Creating a more complex noise model that better represents the noise experienced by real quantum devices would also be beneficial. This would provide a more accurate representation of how quantum models perform in real-world scenarios.
         </p>
         <h2 className="text-2xl font-bold text-base-content mt-4">Conclusion</h2>
         <p className="text-base-content text-opacity-70 mt-2">
-          In conclusion, this project provides valuable insights into the impact of noise on quantum models. The findings emphasize the importance of noise mitigation in achieving reliable quantum computations.
+          In conclusion, the impact of noise on quantum models is a significant factor that can affect the accuracy and performance of quantum machine learning algorithms. Hopefully this project has provided some insights into how noise can impact quantum models and how it can be used to improve performance.
         </p>
         <h2 className="text-2xl font-bold text-base-content mt-4">References</h2>
         <div className="text-base-content text-opacity-70 mt-2">
-          <p>[1] Preskill, John. “Quantum Computing in the NISQ Era and Beyond.” Quantum, vol. 2, Aug. 2018, p.79. Crossref, <a href="https://doi.org/10.22331/q-2018-08-06-79" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://doi.org/10.22331/q-2018-08-06-79</a>.</p>
-          <p>[2] Nielsen, Michael A., and Isaac L. Chuang. “Quantum Computation and Quantum Information.” Cambridge University Press, 2010.</p>
-          <p>[3] Qiskit documentation. Version 0.45.0 <a href="https://docs.quantum.ibm.com/api/qiskit" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://docs.quantum.ibm.com/api/qiskit</a></p>
+          <p>[1] McDonnell, Mark D, and Derek Abbott. “What is stochastic resonance? Definitions, misconceptions, debates, and its relevance to biology.” PLoS computational biology vol. 5,5 (2009): e1000348. <a href="https://doi.org/10.1371/journal.pcbi.1000348" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://doi.org/10.1371/journal.pcbi.1000348</a></p>
+          <p>[2] scikit-learn documentation. Version 1.4.2. <a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html</a></p>
+          <p>[3] Qiskit Machine Learning. Version 0.7.2 <a href="https://qiskit-community.github.io/qiskit-machine-learning/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://qiskit-community.github.io/qiskit-machine-learning/</a></p>
+          <p>[4] Qiskit documentation. Version Version 1.0.2 <a href="https://docs.quantum.ibm.com/api/qiskit" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://docs.quantum.ibm.com/api/qiskit</a></p>
+          <p>[5] Nakanishi, Ken M., Keisuke Fujii, and Synge Todo. "Sequential minimal optimization for quantum-classical hybrid algorithms." Physical Review Research 2.4 (2020): 043158. <a href="https://doi.org/10.1103/PhysRevResearch.2.043158" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://doi.org/10.1103/PhysRevResearch.2.043158</a></p>
+          <p>[6] Huang, Chenyi, and Shibin Zhang. ‘Enhancing Adversarial Robustness of Quantum Neural Networks by Adding Noise Layers’. New Journal of Physics, vol. 25, no. 8, IOP Publishing, Aug. 2023, p. 083019, <a href="https://doi.org/10.1088/1367-2630/ace8b4" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://doi.org/10.1088/1367-2630/ace8b4</a></p>
         </div>
       </div>
       <div className="bottom-space"></div> {/* Add this div */}
