@@ -1,5 +1,5 @@
 import '../../assets/index.css'; // Import the CSS file
-import Latex from 'react-latex-next'; // Import the Latex component
+// import Latex from 'react-latex-next'; // Import the Latex component
 
 const UnderstandingQubitFeatures = () => {
   return (
