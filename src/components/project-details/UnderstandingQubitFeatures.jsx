@@ -70,7 +70,7 @@ const UnderstandingQubitFeatures = () => {
           <li>frequency, anharmonicity</li>
           <li>readout assignment error ('prob meas0 prop1' and 'prob meas1 prop0'), readout length</li>
           <li>gate time</li>
-          <li>ID, rz, sx, Pauli-X (NOT gate), reset, √x gate errors</li>
+          <li>ID, rz, sx, Pauli-X (NOT gate), reset, <InlineMath math="\sqrt{\text{x}}" /> gate errors</li>
           <li>controlled NOT (CNOT) gate error (exclusive to 7-qubit)</li>
           <li>ECR gate error (exclusive to 127-qubit)</li>
         </ul>
@@ -107,6 +107,91 @@ const UnderstandingQubitFeatures = () => {
         <h3 className="text-xl font-bold text-base-content mt-4">4. ECR Gate Error Prediction for 127-Qubit Systems</h3>
         <p className="text-base-content text-opacity-70 mt-2">
           Linear and polynomial LASSO regression were employed again with five-fold cross-validation. Instead of time, predictions for one random 'ECR gate error' value were made across different qubits of all system.
+        </p>
+        <h2 className="text-2xl font-bold text-base-content mt-4">Results</h2>
+        <h3 className="text-xl font-bold text-base-content mt-4">1. Time Series Analysis</h3>
+        <h4 className="text-lg font-bold text-base-content mt-4">1.1 Optimal <InlineMath math="\alpha" />-Regularization</h4>
+        <p className="text-base-content text-opacity-70 mt-2">
+          The optimal <InlineMath math="\alpha" />-regularization parameter value was determined to be <InlineMath math="0.07" />.
+        </p>
+        <h4 className="text-lg font-bold text-base-content mt-4">1.2 Model Performance Metrics</h4>
+        <ul className="list-disc list-inside text-base-content text-opacity-70 mt-2">
+          <li>Average R<InlineMath math="^2" /> score <InlineMath math="\approx -1.252" /></li>
+          <li>The model performs worse than just using the average of the predicted value as a prediction.</li>
+          <li>Optimal R<InlineMath math="^2" /> score = <InlineMath math="1" /></li>
+          <li>Average RMSE score <InlineMath math="\approx 4.319\times 10^{-3}" /></li>
+          <li>The inconclusive nature of the RMSE results is attributed to the small range of values.</li>
+          <li>Optimal RMSE score = <InlineMath math="0" /></li>
+        </ul>
+        <h4 className="text-lg font-bold text-base-content mt-4">1.3 Implications</h4>
+        <p className="text-base-content text-opacity-70 mt-2">
+          The results suggest that qubit data over time is not predictive of error rate.
+        </p>
+        <h3 className="text-xl font-bold text-base-content mt-4">2. ECR Prediction Across Qubits</h3>
+        <h4 className="text-lg font-bold text-base-content mt-4">2.1 Optimal <InlineMath math="\alpha" />-Regularization</h4>
+        <p className="text-base-content text-opacity-70 mt-2">
+          The optimal <InlineMath math="\alpha" />-regularization parameter value was found to be <InlineMath math="0.11" />.
+        </p>
+        <h4 className="text-lg font-bold text-base-content mt-4">2.2 Model Performance Metrics</h4>
+        <ul className="list-disc list-inside text-base-content text-opacity-70 mt-2">
+          <li>Average R<InlineMath math="^2" /> score <InlineMath math="\approx 0.105" /></li>
+          <li>The model exhibits weak predictive power but performs better than the time series analysis.</li>
+          <li>Average RMSE score <InlineMath math="\approx 0.900" /></li>
+          <li>The very poor RMSE score is noted due to the small range of values.</li>
+        </ul>
+        <h4 className="text-lg font-bold text-base-content mt-4">2.3 Implications</h4>
+        <p className="text-base-content text-opacity-70 mt-2">
+          The results suggest that qubit data over other qubits is slightly predictive of the error rate but still exhibits a poor score.
+        </p>
+        <h3 className="text-xl font-bold text-base-content mt-4">3. Correlation Matrix</h3>
+        <p className="text-center">
+          <img src="https://github.com/AuroraArc/qubit-feature-analysis/blob/main/images/corrmatrix.png" alt="Correlation Matrix" />
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+          Some things to note from the visualization of the matrix as a heatmap are that the decoherence times (T<InlineMath math="_1" />, T<InlineMath math="_2" />) show a negative relationship across the other variables. The anharmonicity values seem to be neutral across all variables. Most notably, the probability errors ('prob meas0 prop1, prob meas1 prop0') and gate errors (Pauli-X, ECR) all show a slight relationship with each other.
+        </p>
+        <h3 className="text-xl font-bold text-base-content mt-4">4. ECR Plot</h3>
+        <p className="text-center">
+          <img src="https://github.com/AuroraArc/qubit-feature-analysis/blob/main/images/scatterplot.png" alt="ECR Plot" />
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+          The negative 'ECR error value' is attributed to feature scaling. From the graph, it is clear that there is massive variation observed between predicted and actual values, which suggests a nonlinear relationship. Some data outliers could have influenced lower evaluation metrics.
+        </p>
+        <h2 className="text-2xl font-bold text-base-content mt-4">Discussion</h2>
+        <h3 className="text-xl font-bold text-base-content mt-4">1. Weak Predictive Power and Correlations</h3>
+        <p className="text-base-content text-opacity-70 mt-2">
+          The analysis of qubit features revealed a weak predictive power for error rates, particularly when utilizing linear and low-order polynomial models. Despite this limitation, a stronger correlation was observed when using an individual qubit as a datapoint rather than every time interval. This emphasizes the complex interactions between qubits and the challenges associated with predicting error rates solely based on temporal data.
+        </p>
+        <h3 className="text-xl font-bold text-base-content mt-4">2. Limitations</h3>
+        <h4 className="text-lg font-bold text-base-content mt-4">2.1 Limited Dataset</h4>
+        <p className="text-base-content text-opacity-70 mt-2">
+          A significant limitation of this study is the size of the dataset, especially for the 127-qubit systems. This is because IBM requires a subscription to their paid plan to access the backends of some locked quantum systems. The limited data availability may have constrained the model's ability to discern underlying patterns and relationships accurately.
+        </p>
+        <h4 className="text-lg font-bold text-base-content mt-4">2.2 Potential Noise and Data Cleaning Issues</h4>
+        <p className="text-base-content text-opacity-70 mt-2">
+          The dataset's potential inclusion of noise or inadequate cleaning processes adds another layer of complexity to the interpretation of the results. Ensuring data integrity is critical, and future studies should aim for larger, more comprehensive datasets to enhance the robustness of the analyses.
+        </p>
+        <h3 className="text-xl font-bold text-base-content mt-4">3. Discrepancy Between Correlation Matrix and Error Coefficients</h3>
+        <h4 className="text-lg font-bold text-base-content mt-4">3.1 Correlation Matrix</h4>
+        <p className="text-base-content text-opacity-70 mt-2">
+          An intriguing aspect arises from the examination of the correlation matrix, which suggests a good relationship between certain qubit features.
+        </p>
+        <h4 className="text-lg font-bold text-base-content mt-4">3.2 Error Coefficients</h4>
+        <p className="text-base-content text-opacity-70 mt-2">
+          On the other hand, the error coefficients depict a contrasting scenario, suggesting a less favorable relationship as reflected in the poor evaluation metrics. This discrepancy warrants further investigation into the nuances of the relationships.
+        </p>
+        <h3 className="text-xl font-bold text-base-content mt-4">4. Future Directions</h3>
+        <h4 className="text-lg font-bold text-base-content mt-4">4.1 Understanding Relationship Discrepancy</h4>
+        <p className="text-base-content text-opacity-70 mt-2">
+          Investigating the inconsistency between the correlation matrix and error coefficients should be a first priority in future research. Understanding the underlying reasons for this divergence may unveil crucial insights into the nature of qubit features and their impact on error rates.
+        </p>
+        <h4 className="text-lg font-bold text-base-content mt-4">4.2 Mitigating Errors</h4>
+        <p className="text-base-content text-opacity-70 mt-2">
+          Despite the current limitations, the exploration of relationships between qubit features and error rates holds promise for mitigating error in quantum computations. Future studies can build upon these findings, incorporating more extensive datasets and refining models to enhance predictive capabilities.
+        </p>
+        <h2 className="text-2xl font-bold text-base-content mt-4">Conclusion</h2>
+        <p className="text-base-content text-opacity-70 mt-2">
+          In conclusion, while the present study reveals limitations in predictive power, it lays the groundwork for future investigations. Addressing these limitations and refining methodologies could be crucial for advancing our understanding of the intricate relationships between qubit features and error rates in quantum computing.
         </p>
         <h2 className="text-2xl font-bold text-base-content mt-4">References</h2>
         <div className="text-base-content text-opacity-70 mt-2">
