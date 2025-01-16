@@ -3,7 +3,9 @@ import GitProfile from './components/GitProfile';
 import config from '../gitprofile.config';
 import Header from './components/Header';
 import Projects from './components/Projects';
-import ProjectDetail from './components/ProjectDetail';
+import QuantumComputingML from './components/project-details/QuantumComputingML';
+import UnderstandingQubitFeatures from './components/project-details/UnderstandingQubitFeatures';
+import ReducingRecidivism from './components/project-details/ReducingRecidivism';
 
 function App() {
   return (
@@ -12,13 +14,9 @@ function App() {
       <Routes>
         <Route path="/" element={<GitProfile config={config} />} />
         <Route path="/projects" element={<Projects />} />
-        {config.externalProjects.map((project, index) => (
-          <Route
-            key={index}
-            path={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`}
-            element={<ProjectDetail />}
-          />
-        ))}
+        <Route path="/projects/quantum-computing-and-ml-for-dft-calculations-in-proteins" element={<QMLDFT />} />
+        <Route path="/projects/understanding-the-influence-of-qubit-features-on-error-rates" element={<UnderstandingQubitFeatures />} />
+        <Route path="/projects/breaking-the-cycle-reducing-recidivism-in-iowa-state-prisons" element={<Recidivism />} />
       </Routes>
     </Router>
   );
