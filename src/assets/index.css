@@ -97,7 +97,6 @@ svg {
   display: flex;
   justify-content: left;
   align-items: center;
-  margin-bottom: 2rem; /* Adjust the value to match the gap */
 }
 
 .nav-container {
@@ -172,8 +171,7 @@ svg {
 }
 
 .projects-title {
-  margin-top: 2rem;
-  margin-bottom: 2rem; /* Adjust the value to create a wider gap */
+  margin-bottom: 1.5rem; /* Adjust the value to create a wider gap */
 }
 
 .project-card-hover {
