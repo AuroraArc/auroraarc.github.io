@@ -83,11 +83,11 @@ const UnderstandingQubitFeatures = () => {
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
           <Latex>
-            {`$$\\min_{w} { \\frac{1}{2n_{\\text{samplesz}}} ||w - y||_2 ^ 2 + \\alpha ||w||_1}$$`}
+            {`$$\\min_{w} { \\frac{1}{2n_{\\text{samples}}} ||w - y||_2 ^ 2 + \\alpha ||w||_1}$$`}
           </Latex>
         </p>
         <ul className="text-base-content text-opacity-70 mt-2">
-          <li>$n_{sampleszz}$: number of sampleszzz</li>
+          <li><Latex>{`$$n_{\\text{samples}}$$`}</Latex>: number of samples</li>
           <li>$X$: input features (independent variables)</li>
           <li>$y$: target value (in this case, CNOT error)</li>
           <li>$w$: coefficient vector</li>
