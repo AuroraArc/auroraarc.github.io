@@ -1,5 +1,5 @@
-import '../../../assets/index.css'; // Import the CSS file
 import { Link } from 'react-router-dom';
+import '../../../assets/index.css'; // Import the CSS file
 
 const MusicGen = () => {
   return (
