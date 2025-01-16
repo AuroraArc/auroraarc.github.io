@@ -7,10 +7,11 @@ const UnderstandingQubitFeatures = () => {
       <p className="text-base-content text-opacity-70 text-center mt-2">
         The goal of the project was to assess correlations between qubit features and ultimately predict error probability.
       </p>
-      <div className="flex justify-center mt-4">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Bloch_sphere.svg" alt="Understanding the Influence of Qubit Features on Error Rates" className="max-w-full h-auto" />
-      </div>
       <div className="project-content mt-6">
+      <p className="text-base-content text-opacity-50 text-center mt-2 italic opacity">
+      This is the first of two semesters of a solo research project conduct by me under the guidance of Dr. Nicholas LaRacuente (<a href="mailto:nlaracu@iu.edu" className="text-blue-500">nlaracu@iu.edu</a>) during the fall 2023 semester. Link to the source code and how to run it can be found <a href="https://github.com/AuroraArc/qubit-feature-analysis" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">here</a>.
+      </p>
+      <div className="project-content mt-6 text-left mx-auto max-w-screen-lg">
         <h2 className="text-2xl font-bold text-base-content mt-4">Introduction</h2>
         <p className="text-base-content text-opacity-70 mt-2">
           This project aims to assess correlations between qubit features and predict error probability.

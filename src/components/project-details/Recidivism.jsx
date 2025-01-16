@@ -7,9 +7,6 @@ const Recidivism = () => {
       <p className="text-base-content text-opacity-70 text-center mt-2">
         Analysis of the recidivism cycle and the impact of various factors on recidivism rates.
       </p>
-      <div className="flex justify-center mt-4">
-        <img src="https://static.vecteezy.com/system/resources/previews/005/720/400/non_2x/prison-icon-jail-illustration-isolated-on-white-background-free-vector.jpg" alt="Breaking the Cycle: Reducing Recidivism in Iowa State Prisons" className="max-w-full h-auto" />
-      </div>
       <div className="project-content mt-6">
         <h2 className="text-2xl font-bold text-base-content mt-4">Introduction</h2>
         <p className="text-base-content text-opacity-70 mt-2">
