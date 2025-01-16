@@ -151,7 +151,7 @@ svg {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 66.67%; /* 2/3rds of the screen width */
+  width: 150%; /* Adjust width as needed */
   min-height: 200px; /* Adjust as needed */
   border: 1px solid gray; /* Border around the project card */
   z-index: 1;
