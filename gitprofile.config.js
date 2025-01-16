@@ -89,6 +89,18 @@ const config = {
       imageUrl: 'https://lh3.googleusercontent.com/1xoO5BAUUU8kLns4myMNnKw6RRQyUk1JdlWL1M0aDiagMgaBeDA9O8Y4rYFAo9hfnzmb0cnUMrT_-cStBqnyp_zW59F5Edwbvxcy3EVmfeKS-PNgVw=w1072-h603-n-nu-rw',
     },
     {
+      title: 'Music Generation Using Performer',
+      description:
+        'Implementing a music generation model using Performer, a transformer-based model that uses the FAVOR+ algorithm for efficient attention computation.',
+      imageUrl: 'https://moises.ai/_next/image/?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhow_to_reading_sheet_music_image_338d99b137%2Fhow_to_reading_sheet_music_image_338d99b137.jpg&w=1920&q=75',
+    },
+    {
+      title: 'Analysis of Noise on Quantum Models',
+      description:
+      'The goal was to analyze the impact of noise on the accuracy of quantum models using quantum classifiers and noise models.',
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Arcfour2.png',
+    }
+    {
       title: 'Understanding the Influence of Qubit Features on Error Rates',
       description:
         'The goal of the project was to assess correlations between qubit features and ultimately predict error probability.',
