@@ -19,13 +19,6 @@ const ProjectDetail = () => {
           <img src={project.imageUrl} alt={project.title} className="max-w-full h-auto" />
         </div>
       )}
-      {project.link && (
-        <div className="flex justify-center mt-4">
-          <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-primary">
-            View Project
-          </a>
-        </div>
-      )}
       {/* Add more project details here */}
     </div>
   );
