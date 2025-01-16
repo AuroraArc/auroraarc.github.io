@@ -55,7 +55,7 @@ const NoiseModels = () => {
             After the data has been transformed, we need to apply an ansatz, which is analogous to the neural layers in a classical neural network. The ansatz is a series of quantum gates that are applied to the qubits to perform computations. In this example, the <em>EfficientSU2</em> ansatz is used, which is a parameterized circuit that can be optimized to minimize the loss function. It consists of a series of single-qubit rotation about the Y and Z axes and controlled-Z gates.
         </p>
         <p className="text-center">
-            <img src={ansatz} alt="Ansatz" className="mx-auto my-4" style={{ width: '800px', height: '200px' }} />
+            <img src={ansatz} alt="Ansatz" className="mx-auto my-4" style={{ width: '700px', height: '200px' }} />
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
             Finally, we ned to choose an optimization algorithm to use. I chose the Nakanishi-Fujii-Todo (NFT) [5] algorithm, which has these key features:
