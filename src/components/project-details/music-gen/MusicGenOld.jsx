@@ -9,7 +9,7 @@ const MusicGenOld = () => {
       </p>
       <div className="italic-section mx-auto max-w-screen-lg">
         <p className="text-base-content text-opacity-50 mt-2 italic opacity">
-          This project was conducted under the guidance of Dr. Nicholas LaRacuente (<a href="mailto:nlaracu@iu.edu" className="text-blue-500">nlaracu@iu.edu</a>) during the spring 2024 semester. Link to the source code and how to run it can be found <a href="https://github.com/AuroraArc/music-gen-old" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">here</a>.
+            Unfortunately, I seemed to have lost the original code for this project. It was connected to an old school GitHub and I have forgotten the password to it.
         </p>
       </div>
       <hr className="my-6 border-t-2 border-gray-300" />

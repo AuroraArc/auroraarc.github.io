@@ -9,7 +9,7 @@ const MusicGen = () => {
       </p>
       <div className="italic-section mx-auto max-w-screen-lg">
         <p className="text-base-content text-opacity-50 mt-2 italic opacity">
-          This project was conducted under the guidance of Dr. Nicholas LaRacuente (<a href="mailto:nlaracu@iu.edu" className="text-blue-500">nlaracu@iu.edu</a>) during the spring 2024 semester. Link to the source code and how to run it can be found <a href="https://github.com/AuroraArc/music-gen" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">here</a>.
+          The current code is slightly outdated and does is broken at the moment. There is an older version of the project that instead used a genetic algorithm with a GRU-based model for music generation. This can be viewed <Link to="/projects/music-generation-using-gga" className="text-blue-500 underline">here</Link>.
         </p>
       </div>
       <hr className="my-6 border-t-2 border-gray-300" />
