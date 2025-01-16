@@ -99,7 +99,7 @@ const config = {
       description:
       'The goal was to analyze the impact of noise on the accuracy of quantum models using quantum classifiers and noise models.',
       imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Arcfour2.png',
-    }
+    },
     {
       title: 'Understanding the Influence of Qubit Features on Error Rates',
       description:
