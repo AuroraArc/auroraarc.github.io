@@ -1,4 +1,4 @@
-import '../assets/index.css'; // Import the CSS file
+import '.../assets/index.css'; // Import the CSS file
 
 const Recidivism = () => {
   return (
