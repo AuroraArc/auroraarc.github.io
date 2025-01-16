@@ -7,13 +7,13 @@ const UnderstandingQubitFeatures = () => {
       <p className="text-base-content text-opacity-70 text-center mt-2">
         The goal of the project was to assess correlations between qubit features and ultimately predict error probability.
       </p>
-      <div className="italic-section text-center mx-auto max-w-screen-lg">
+      <div className="italic-section text-center max-w-screen-lg">
         <p className="text-base-content text-opacity-50 mt-2 italic opacity">
           This is the first of two semesters of a solo research project conducted by me under the guidance of Dr. Nicholas LaRacuente (<a href="mailto:nlaracu@iu.edu" className="text-blue-500">nlaracu@iu.edu</a>) during the fall 2023 semester. Link to the source code and how to run it can be found <a href="https://github.com/AuroraArc/qubit-feature-analysis" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">here</a>.
         </p>
       </div>
       <hr className="my-6 border-t-2 border-gray-300" />
-      <div className="project-content mt-6 text-left mx-auto max-w-screen-lg">
+      <div className="project-content mt-6 text-left max-w-screen-lg">
         <h2 className="text-2xl font-bold text-base-content mt-4">Abstract</h2>
         <p className="text-base-content text-opacity-70 mt-2">
           The goal of this project is to assess correlations between qubit features and ultimately predict error probability. In the context of quantum computing, quantum bits (qubits) serve as the fundamental units for information processing, comparable to classical bits in conventional computers that store and process data using 1s and 0s. Quantum gates, analogous to classical logic gates such as NOT and OR, are employed to manipulate qubit states. The project involved the application of time series analysis to examine 7-qubit systems, notably 'ibm_perth', over a span of 315 days. Additionally, normal regression analysis was conducted for 127-qubit systems over a one-day period, instead treating each individual qubit as a data point, encompassing seven unique systems. Evaluation of prediction accuracy was carried out using root mean square error (RMSE) and R-squared (R2), common regression techniques. The results indicate a limited predictive capability of qubit features in relation to error rates when employing linear and low-order polynomials. Notably, a stronger correlation was noted across qubits compared to across time. Future exploration involves investigating the discrepancy between the correlation matrix and the error coefficients, and a comprehensive understanding of the relationship between qubit features and error rates may enhance error mitigation when integrated with existing models.
