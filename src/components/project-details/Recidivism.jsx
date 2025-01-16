@@ -1,6 +1,6 @@
 import '../assets/index.css'; // Import the CSS file
 
-const ReducingRecidivism = () => {
+const Recidivism = () => {
   return (
     <div className="fade-in h-screen bg-base-100 p-4 lg:p-10">
       <h1 className="text-3xl font-bold text-base-content text-center mt-4">Breaking the Cycle: Reducing Recidivism in Iowa State Prisons</h1>
@@ -28,4 +28,4 @@ const ReducingRecidivism = () => {
   );
 };
 
-export default ReducingRecidivism;
+export default Recidivism;
