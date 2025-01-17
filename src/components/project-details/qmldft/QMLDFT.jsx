@@ -36,14 +36,14 @@ const QMLDFT = () => {
           An important benchmark for QM methods is to achieve so-called chemical accuracy--errors of approximately 1kcal/mol, which is the energy scale associated with thermal fluctuations at ambient temperatures.
         </p>
         <p className="text-center">
-          <img src={errorvscost} alt="errorvscost" className="mx-auto my-4" style={{ width: '500px', height: '400px '}} />
+          <img src={errorvscost} alt="errorvscost" className="mx-auto my-4" style={{ width: '400px', height: '320px '}} />
         </p>
         <h3 className="text-xl font-bold text-base-content mt-4">Calculating Electronic Density</h3>
         <p className='text-base-content text-opacity-70 mt-2'>
         At the heart of many chemical and physical properties lies the Schrödinger equation. This fundamental equation describes the quantum state of a system. However, there's a significant challenge: solving the Schrödinger equation becomes exponentially more difficult as the number of electrons in a system increases. This exponential scaling is a major bottleneck in computational chemistry, limiting our ability to study large, complex systems like proteins or advanced materials.
         </p>
         <p className="text-center">
-          <img src={dft} alt="dft" className="mx-auto my-4" style={{ width: '400px', height: '200px '}} />
+          <img src={dft} alt="dft" className="mx-auto my-4" style={{ width: '400px', height: '250px '}} />
         </p>
         <p className='text-base-content text-opacity-70 mt-2'>
         Density Functional Theory (DFT) is a method used in quantum chemistry and physics to calculate the electronic structure of matter. Instead of solving the complex many-electron wavefunction, DFT simplifies the problem by focusing on the electron density, which is a function that describes the probability of finding electrons in different regions of space. DFT models can reduce this computational scaling to O(N<sup>3</sup>), justifying the practical success of this approach.
@@ -66,7 +66,7 @@ const QMLDFT = () => {
         </p>
         <h3 className="text-2xl font-bold text-base-content mt-4">ML: The Solution?</h3>
         <p className="text-center">
-          <img src={errorvscostml} alt="errorvscostml" className="mx-auto my-4" style={{ width: '500px', height: '400px '}} />
+          <img src={errorvscostml} alt="errorvscostml" className="mx-auto my-4" style={{ width: '400px', height: '320px '}} />
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
         One of the most exciting developments we've made is the integration of machine learning (ML) and deep learning (DL) techniques. ML-based potentials attempt to bridge the gap between highly accurate quantum mechanics simulations and hte affordable, but less transferrable, classical force field approaches.
@@ -96,13 +96,13 @@ const QMLDFT = () => {
           There are two key adaptations that form the backbone of our approach.
         </p>
         <p className="text-center">
-          <img src={papers} alt="papers" className="mx-auto my-4" style={{ width: '800px', height: '300px '}} />
+          <img src={papers} alt="papers" className="mx-auto my-4" style={{ width: '700px', height: '300px '}} />
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
           PointNet++ introduced a hierarchical feature learning approach that has proven incredibly effective for point cloud processing. The key insight here is the ability to capture fine-grained patterns and features at different scales. In the context of our work, this hierarchical approach is crucial. It allows us to capture both local atomic interactions and broader molecular structures. Imagine zooming in to see individual atom-electron interactions, then zooming out to understand how these interactions affect the overall molecular structure. Next, we have Dynamic Graph CNN. The standout feature here is its EdgeConv module. This module constructs a local neighborhood graph and applies convolution-like operations on the edges connecting neighboring pairs of points.
         </p>
         <p className="text-center">
-          <img src={ldgcnn} alt="LDGCNN" className="mx-auto my-4" style={{ width: '500px', height: '200px '}} />
+          <img src={ldgcnn} alt="LDGCNN" className="mx-auto my-4" style={{ width: '500px', height: '250px '}} />
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
           This is the original architecture of the LDGCNN as it was designed for object classification tasks.
@@ -113,7 +113,7 @@ const QMLDFT = () => {
         <h3 className="text-xl font-bold text-base-content mt-4">Quantum Circuit Born Machine</h3>
         <p className="text-base-content text-opacity-70 mt-2">
         <p className="text-center">
-          <img src={qcbm} alt="qcbm" className="mx-auto my-4" style={{ width: '700px', height: '350px '}} />
+          <img src={qcbm} alt="qcbm" className="mx-auto my-4" style={{ width: '700px', height: '400px '}} />
         </p>
           A QCBM is a type of quantum machine learning model that uses quantum circuit to generate and represent probability distribution. This model comes from the Born rule in quantum mechanics, which states that the probability of measuring a particular outcome in a quantum system is given by the square of the amplitude of the corresponding quantum state. In the context of a QCBM, the output probabilities of measurements are derived from this rule.
         </p>
