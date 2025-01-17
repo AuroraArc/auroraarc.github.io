@@ -1,4 +1,5 @@
 import '../../../assets/index.css'; // Import the CSS file
+import ldgcnn from './ldgcnn.png';
 
 const QMLDFT = () => {
   return (
@@ -7,6 +8,11 @@ const QMLDFT = () => {
       <p className="text-base-content text-opacity-70 text-center mt-2">
         Proposed a novel QC-ML hybrid model for accelerating DFT calculations in large molecular systems using a graph-CNN like model with a QCBM.
       </p>
+      <div className="italic-section mx-auto max-w-screen-lg">
+        <p className="text-base-content text-opacity-50 mt-2 italic opacity">
+            The first half is a symposium presentation I gave on the topic of my research and the surrounding background regarding quantum chemistry and its computational challenges. The second half is a more detailed explanation of the architecture I proposed and the reasons behind it.
+        </p>
+      </div>
       <div className="project-content mt-6">
         <h2 className="text-2xl font-bold text-base-content mt-4">Introduction</h2>
         <p className="text-base-content text-opacity-70 mt-2">
@@ -43,7 +49,56 @@ const QMLDFT = () => {
         <p className="text-base-content text-opacity-70 mt-2">
         One computational simplification is to neglect quantum mechanics entirely with the use of classical force fields, which approximate the system as a classical bead-spring model with additional terms for Coulomb and dispersion interactions. These models typically exhibit linear scaling, facilitating MD simulations of systems with millions or even billions of atoms. The major downside to this is that the bonding-oriented modeling approach limits their applicability to nonreactive conditions. Thus, they are not reliable for investigations of, for example, reaction pathways and transition states or generally dynamics far from a state of equilibrium. While the scalability of force fields is excellent, their accuracy and transferability are severely constrained.
         </p>
-        <h2 className="text-2xl font-bold text-base-content mt-4">Conclusion</h2>
+        <h3 className="text-2xl font-bold text-base-content mt-4">ML: The Solution?</h3>
+        <p className="text-base-content text-opacity-70 mt-2">
+        One of the most exciting developments we've made is the integration of machine learning (ML) and deep learning (DL) techniques. ML-based potentials attempt to bridge the gap between highly accurate quantum mechanics simulations and hte affordable, but less transferrable, classical force field approaches.
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+          Models can fall into two categories: non-parametric and parametric.
+        </p>
+        <ul className="text-base-content text-opacity-70 mt-2 list-disc ml-6">
+          <li>A good example of a non-parametric model is a kernel-based approach. The designer of the model specifies a kernel function that serves as a measure of similarity between two inputs (e.g., two local atomic environments). The greater this similarity measure, the closer the model outputs are expected to be. The downside to non-parametric modeling is that it can become computationally expensive for large datasets as model complexity grows with dataset size.</li>
+          <li>Alternatively, it can be advantageous to assume some fixed, or parametric, functional form for the model, typically with a large number of fitting parameters.</li>
+        </ul>
+        <p className="text-base-content text-opacity-70 mt-2">
+          A large area of research is the design of good descriptors (feature vectors) that highlight the most important chemical features in an input data point. With very carefully designed descriptors, relatively simple models, such as linear regression, can achieve very high accuracies.
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+          Neural networks are highly flexible, nonlinear functions with thousands to millions of parameters that are optimized to fit a dataset. A large number of parameters provides many degrees of freedom, allowing an optimization algorithm to decide the best mapping that transforms the input into an estimation of a desired property.
+        </p>
+        <h2 className="text-xl font-bold text-base-content mt-4">Model Proposal</h2>
+        <p className="text-base-content text-opacity-70 mt-2">
+          The model I propose integrate quantum computing with a graph convolutional neural network (CNN)-like model. First and foremost, this model leverages the power of both quantum and classical computing. By integrating these two paradigms, we're ale to tackle the complex problem of electronic density calculations in a way that hasn't been done before. The quantum component allows us to capture intricate quantum interactions, while the classical neural network provides robust learning capabilities. We believe our approach has the potential to overcome some of the limitations of current density calculation methods.
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+        A key feature of our model is its use of point clouds to represent atomic structures. Point clouds offer us a flexible geometric representation that's particularly well-suited for atomic data. Imagine each atom as a point in 3D space, with additional features like atomic number or charge. This representation allows us to handle a wide variety of molecular geometries and sizes with ease. First, point clouds are sparse and unstructured, which means they can efficiently represent the inherently sparse nature of atomic structures. This sparsity translates to lower computational costs compared to volumetric representations, which is crucial when dealing with large molecular systems. Moreover, the unordered nature of point clouds aligns perfectly with the quantum nature of electron distributions. We can choose to interpolate the original point cloud into a finer resolution adaptively. Electrons don't have a fixed order around an atom, and point clouds allow us to capture this fundamental characteristic.
+        </p>
+        <h3 className="text-xl font-bold text-base-content mt-4">PointNet++ & LDGCNN</h3>
+        <p className="text-base-content text-opacity-70 mt-2">
+        There are two key adaptations that form the backbone of our approach.
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+        PointNet++ introduced a hierarchical feature learning approach that has proven incredibly effective for point cloud processing. The key insight here is the ability to capture fine-grained patterns and features at different scales. In the context of our work, this hierarchical approach is crucial. It allows us to capture both local atomic interactions and broader molecular structures. Imagine zooming in to see individual atom-electron interactions, then zooming out to understand how these interactions affect the overall molecular structure. Next, we have Dynamic Graph CNN. The standout feature here is its EdgeConv module. This module constructs a local neighborhood graph and applies convolution-like operations on the edges connecting neighboring pairs of points.
+        </p>
+        <p className="text-center">
+          <img src={ldgcnn} alt="LDGCNN" className="w-1/2 mx-auto" />
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+          This is the original architecture of the LDGCNN as it was designed for object classification tasks.
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+          The proposed model follows a similar structure; however, since we have a regression task, we must modify the overall pipeline slightly by instead adapting the segmentation portion of the original architecture, and from there, modify the output. We can change the end layer of the MLP to a fully-connected layer to output continuous values for density in a fully-classical case or replace the MLP entirely with a Quantum Circuit Born Machine (QCBM) to output a density distribution.
+        </p>
+        <h3 className="text-xl font-bold text-base-content mt-4">Quantum Circuit Born Machine</h3>
+        <p className="text-base-content text-opacity-70 mt-2">
+          A QCBM is a type of quantum machine learning model that uses quantum circuit to generate and represent probability distribution. This model comes from the Born rule in quantum mechanics, which states that the probability of measuring a particular outcome in a quantum system is given by the square of the amplitude of the corresponding quantum state. In the context of a QCBM, the output probabilities of measurements are derived from this rule.
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+          We have a parametrized quantum circuit, meaning it has adjustable parameters that can be tuned to fit specific data ro distribution characteristics. The parameters of the quantum circuit are optimized during a training process to minimize the difference between the quantum-generated probability distribution and a target distribution (e.g., a dataset of a known distribution). A cost function measures how well the quantum circuit's output matches the target distribution.
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+          In the context of this project, we want to utilize a QCBM to generate an electronic density distribution on an input dataset.
+        </p>
         <p className="text-base-content text-opacity-70 mt-2">
           The project successfully demonstrated the potential of QC-ML hybrid models in accelerating DFT calculations. Future work includes further optimization and testing.
         </p>

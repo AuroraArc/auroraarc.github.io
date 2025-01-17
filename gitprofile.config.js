@@ -30,7 +30,7 @@ const config = {
     },
     resume: {
     fileUrl:
-      './cv.pdf', // Path to the CV file within the project directory.
+      'https://github.com/AuroraArc/auroraarc.github.io/blob/main/cv.pdf'
   },
   skills: [
     'Python',
