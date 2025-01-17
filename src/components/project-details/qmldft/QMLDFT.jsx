@@ -35,16 +35,24 @@ const QMLDFT = () => {
         <p className="text-base-content text-opacity-70 mt-2">
           An important benchmark for QM methods is to achieve so-called chemical accuracy--errors of approximately 1kcal/mol, which is the energy scale associated with thermal fluctuations at ambient temperatures.
         </p>
-        <p className="text-center">
+        <figure className="text-center">
           <img src={errorvscost} alt="errorvscost" className="mx-auto my-4" style={{ width: '400px', height: '320px '}} />
-        </p>
+          <figcaption className="text-base-content text-opacity-70 mt-2">
+            Figure 1: Error vs. Cost.
+            Kulichenko, Maksim, et al. “The rise of neural networks for materials and Chemical Dynamics.” The Journal of Physical Chemistry Letters, vol. 12, no. 26, 1 July 2021, pp. 6227–6243.
+          </figcaption>
+        </figure>
         <h3 className="text-xl font-bold text-base-content mt-4">Calculating Electronic Density</h3>
         <p className='text-base-content text-opacity-70 mt-2'>
         At the heart of many chemical and physical properties lies the Schrödinger equation. This fundamental equation describes the quantum state of a system. However, there's a significant challenge: solving the Schrödinger equation becomes exponentially more difficult as the number of electrons in a system increases. This exponential scaling is a major bottleneck in computational chemistry, limiting our ability to study large, complex systems like proteins or advanced materials.
         </p>
-        <p className="text-center">
+        <figure className="text-center">
           <img src={dft} alt="dft" className="mx-auto my-4" style={{ width: '400px', height: '250px '}} />
-        </p>
+          <figcaption className="text-base-content text-opacity-70 mt-2">
+          Figure 2: Density functional theory (DFT) abandons the many-particle electron reality in favor of electron density.
+          Lusk, Mark T., and Ann E. Mattsson. “High-Performance Computing for Materials Design to Advance Energy Science.” MRS Bulletin 36.3 (2011): 169–174.
+          </figcaption>
+        </figure>
         <p className='text-base-content text-opacity-70 mt-2'>
         Density Functional Theory (DFT) is a method used in quantum chemistry and physics to calculate the electronic structure of matter. Instead of solving the complex many-electron wavefunction, DFT simplifies the problem by focusing on the electron density, which is a function that describes the probability of finding electrons in different regions of space. DFT models can reduce this computational scaling to O(N<sup>3</sup>), justifying the practical success of this approach.
         </p>
@@ -58,16 +66,24 @@ const QMLDFT = () => {
         <p className="text-base-content text-opacity-70 mt-2">
         Modeling of dynamical processes (chemical reactions, shocks, protein folding, and phase transitions in materials, to name a few) requires large-scale molecular dynamics (MD) simulations. And so, the question arises: can we find a more affordable approach? What if we disregard quantum mechanics entirely?
         </p>
-        <p className="text-center">
+        <figure className="text-center">
           <img src={md} alt="md" className="mx-auto my-4" style={{ width: '400px', height: '300px '}} />
-        </p>
+          <figcaption className="text-base-content text-opacity-70 mt-2">
+          Figure 3: Modeling of a polymeric molecule as a multi-bead spring-chain.
+          Rüttgers, A., and M. Griebel. “Multiscale simulation of polymeric fluids using the sparse grid combination technique.” Applied Mathematics and Computation, vol. 319, Feb. 2018, pp. 425–443.
+          </figcaption>
+        </figure>
         <p className="text-base-content text-opacity-70 mt-2">
         One computational simplification is to neglect quantum mechanics entirely with the use of classical force fields, which approximate the system as a classical bead-spring model with additional terms for Coulomb and dispersion interactions. These models typically exhibit linear scaling, facilitating MD simulations of systems with millions or even billions of atoms. The major downside to this is that the bonding-oriented modeling approach limits their applicability to nonreactive conditions. Thus, they are not reliable for investigations of, for example, reaction pathways and transition states or generally dynamics far from a state of equilibrium. While the scalability of force fields is excellent, their accuracy and transferability are severely constrained.
         </p>
         <h3 className="text-2xl font-bold text-base-content mt-4">ML: The Solution?</h3>
-        <p className="text-center">
+        <figure className="text-center">
           <img src={errorvscostml} alt="errorvscostml" className="mx-auto my-4" style={{ width: '400px', height: '320px '}} />
-        </p>
+          <figcaption className="text-base-content text-opacity-70 mt-2">
+          Figure 4: Error vs. Cost.
+          Kulichenko, Maksim, et al. “The rise of neural networks for materials and Chemical Dynamics.” The Journal of Physical Chemistry Letters, vol. 12, no. 26, 1 July 2021, pp. 6227–6243.
+          </figcaption>
+        </figure>
         <p className="text-base-content text-opacity-70 mt-2">
         One of the most exciting developments we've made is the integration of machine learning (ML) and deep learning (DL) techniques. ML-based potentials attempt to bridge the gap between highly accurate quantum mechanics simulations and hte affordable, but less transferrable, classical force field approaches.
         </p>
@@ -101,9 +117,13 @@ const QMLDFT = () => {
         <p className="text-base-content text-opacity-70 mt-2">
           PointNet++ introduced a hierarchical feature learning approach that has proven incredibly effective for point cloud processing. The key insight here is the ability to capture fine-grained patterns and features at different scales. In the context of our work, this hierarchical approach is crucial. It allows us to capture both local atomic interactions and broader molecular structures. Imagine zooming in to see individual atom-electron interactions, then zooming out to understand how these interactions affect the overall molecular structure. Next, we have Dynamic Graph CNN. The standout feature here is its EdgeConv module. This module constructs a local neighborhood graph and applies convolution-like operations on the edges connecting neighboring pairs of points.
         </p>
-        <p className="text-center">
+        <figure className="text-center">
           <img src={ldgcnn} alt="LDGCNN" className="mx-auto my-4" style={{ width: '500px', height: '250px '}} />
-        </p>
+          <figcaption className="text-base-content text-opacity-70 mt-2">
+          Figure 7: LDGCNN architecture.
+          Zhang, Kuangen, et al. "Linked dynamic graph cnn: Learning through point cloud by linking hierarchical features." 2021 27th international conference on mechatronics and machine vision in practice (M2VIP). IEEE, 2021.
+          </figcaption>
+        </figure>
         <p className="text-base-content text-opacity-70 mt-2">
           This is the original architecture of the LDGCNN as it was designed for object classification tasks.
         </p>
@@ -112,9 +132,13 @@ const QMLDFT = () => {
         </p>
         <h3 className="text-xl font-bold text-base-content mt-4">Quantum Circuit Born Machine</h3>
         <p className="text-base-content text-opacity-70 mt-2">
-        <p className="text-center">
+        <figure className="text-center">
           <img src={qcbm} alt="qcbm" className="mx-auto my-4" style={{ width: '700px', height: '400px '}} />
-        </p>
+          <figcaption className="text-base-content text-opacity-70 mt-2">
+          Figure 6: A visualization of the QCBM algorithm and generalization evaluation scheme.
+          Gili, Kaitlin, et al. "Do quantum circuit born machines generalize?." Quantum Science and Technology 8.3 (2023): 035021.
+          </figcaption>
+        </figure>
           A QCBM is a type of quantum machine learning model that uses quantum circuit to generate and represent probability distribution. This model comes from the Born rule in quantum mechanics, which states that the probability of measuring a particular outcome in a quantum system is given by the square of the amplitude of the corresponding quantum state. In the context of a QCBM, the output probabilities of measurements are derived from this rule.
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
@@ -126,6 +150,11 @@ const QMLDFT = () => {
         <p className="text-base-content text-opacity-70 mt-2">
           The project successfully demonstrated the potential of QC-ML hybrid models in accelerating DFT calculations. Future work includes further optimization and testing.
         </p>
+        <h2 className="text-xl font-bold text-base-content mt-4">References</h2>
+        <div className="text-base-content text-opacity-70 mt-2">
+          <p>Qi, Charles Ruizhongtai, et al. "Pointnet++: Deep hierarchical feature learning on point sets in a metric space." Advances in neural information processing systems 30 (2017). <a href="https://doi.org/10.48550/arXiv.1706.02413" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://doi.org/10.48550/arXiv.1706.02413</a></p>
+          <p>Zhang, Kuangen, et al. "Linked dynamic graph cnn: Learning through point cloud by linking hierarchical features." 2021 27th international conference on mechatronics and machine vision in practice (M2VIP). IEEE, 2021. <a href="https://doi.org/10.48550/arXiv.1904.10014" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://doi.org/10.48550/arXiv.1904.10014</a></p>
+        </div>
       </div>
       <div className="bottom-space"></div> {}
     </div>
