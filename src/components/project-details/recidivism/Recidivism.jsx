@@ -14,7 +14,7 @@ const Recidivism = () => {
       </div>
       <hr className="my-6 border-t-2 border-gray-300" />
       <div className="project-content mt-6 mx-auto max-w-screen-lg">
-        <h2 className="text-2xl font-bold text-base-content mt-4">Abstract</h2>
+        <h2 className="text-2xl font-bold text-base-content mt-4">Summary</h2>
         <p className="text-base-content text-opacity-70 mt-2">
           In this paper, we address the persistent issue of repeat offenses in Iowa, where over one-third of released inmates return to prison within three years. This high recidivism rate not only affects offenders but also imposes substantial financial burdens on the state's citizens. Utilizing data from the Iowa Department of Corrections, we developed a feed-forward neural network to predict the likelihood of an inmate re-offending upon release. The model incorporated various parameters, including inmate-specific factors (age, gender, type of crime), prison conditions (e.g., overpopulation), and socio-economic indicators from the inmate's home county (such as median personal income). The model achieved an AUC-ROC score of 0.849, indicating a high level of accuracy. To assess the financial impact of recidivism, we estimated costs associated with different classifications of crimes, predicting that recidivism could cost Iowa over $348 million. This analysis included a heat map to identify the distribution of crimes by classification, highlighting areas with higher concentrations of specific felony classes.
         </p>

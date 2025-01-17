@@ -95,6 +95,11 @@ const config = {
       imageUrl: 'https://moises.ai/_next/image/?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhow_to_reading_sheet_music_image_338d99b137%2Fhow_to_reading_sheet_music_image_338d99b137.jpg&w=1920&q=75',
     },
     {
+      title: 'Music Generation Using GGAs (OLD)',
+      desription: 'Implementing a music generation model using Genetic Algorithm (GGA) for evolving music sequences.',
+      imageUrl: 'https://moises.ai/_next/image/?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhow_to_reading_sheet_music_image_338d99b137%2Fhow_to_reading_sheet_music_image_338d99b137.jpg&w=1920&q=75',
+    }
+    {
       title: 'Analysis of Noise on Quantum Models',
       description:
       'The goal was to analyze the impact of noise on the accuracy of quantum models using quantum classifiers and noise models.',
