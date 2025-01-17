@@ -58,7 +58,7 @@ const NoiseModels = () => {
             <img src={ansatz} alt="Ansatz" className="mx-auto my-4" style={{ width: '700px', height: '200px' }} />
         </p>
         <p className="text-base-content text-opacity-70 mt-2">
-            Finally, we ned to choose an optimization algorithm to use. I chose the Nakanishi-Fujii-Todo (NFT) [5] algorithm, which has these key features:
+            Finally, we need to choose an optimization algorithm to use. I chose the Nakanishi-Fujii-Todo (NFT) [5] algorithm, which has these key features:
         </p>
         <ul className="text-base-content text-opacity-70 mt-2">
             <li>Divides optimization problem into solvable subproblems by considering subset of parameters</li>

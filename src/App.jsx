@@ -23,7 +23,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/quantum-computing-and-ml-for-dft-calculations-in-proteins" element={<QMLDFT />} />
         <Route path="/projects/music-generation-using-performer" element={<MusicGen />} />
-        <Route path="/projects/music-generation-using-gga" element={<MusicGenOld />} />
+        <Route path="/projects/music-generation-using-ggas-(old)" element={<MusicGenOld />} />
         <Route path="/projects/analysis-of-noise-on-quantum-models" element={<NoiseModels />} />
         <Route path="/projects/understanding-the-influence-of-qubit-features-on-error-rates" element={<UnderstandingQubitFeatures />} />
         <Route path="/projects/breaking-the-cycle:-reducing-recidivism-in-iowa-state-prisons" element={<Recidivism />} />

@@ -30,7 +30,7 @@ const config = {
     },
     resume: {
     fileUrl:
-      '/cv.pdf', // Path to the CV file within the project directory.
+      './cv.pdf', // Path to the CV file within the project directory.
   },
   skills: [
     'Python',

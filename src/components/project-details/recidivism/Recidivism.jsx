@@ -22,10 +22,10 @@ const Recidivism = () => {
           Based on these findings, we formulated four major recommendations to reduce recidivism rates and associated costs:
         </p>
         <ul className="text-base-content text-opacity-70 mt-2 list-disc ml-6">
-          <li>Address Prison Overpopulation: Given the significant correlation between prison overpopulation and recidivism rates, we propose that the Iowa Department of Justice increase its implementation of alternative correctional programs, such as probation and community service, and reduce the use of mandatory minimums and determinate sentencing in the Iowa state code.</li>
-          <li>Enhance Drug and Behavioral Therapy: Implement comprehensive drug and behavioral therapy programs to address underlying issues contributing to criminal behavior.</li>
-          <li>Expand Education and Counseling in Maximum Security Prisons: Provide more educational and counseling opportunities to equip inmates with skills and support for successful reintegration into society.</li>
-          <li>Develop Post-Release Programs for At-Risk Inmates: Focus on creating support systems for inmates identified as high-risk for recidivism to facilitate their transition back into the community.</li>
+          <li><strong>Address Prison Overpopulation</strong>: Given the significant correlation between prison overpopulation and recidivism rates, we propose that the Iowa Department of Justice increase its implementation of alternative correctional programs, such as probation and community service, and reduce the use of mandatory minimums and determinate sentencing in the Iowa state code.</li>
+          <li><strong>Enhance Drug and Behavioral Therapy</strong>: Implement comprehensive drug and behavioral therapy programs to address underlying issues contributing to criminal behavior.</li>
+          <li><strong>Expand Education and Counseling in Maximum Security Prisons</strong>: Provide more educational and counseling opportunities to equip inmates with skills and support for successful reintegration into society.</li>
+          <li><strong>Develop Post-Release Programs for At-Risk Inmates</strong>: Focus on creating support systems for inmates identified as high-risk for recidivism to facilitate their transition back into the community.</li>
         </ul>
         <p className="text-base-content text-opacity-70 mt-2">
           These recommendations aim to reduce recidivism rates and alleviate the financial and social costs associated with repeat offenses in Iowa.
