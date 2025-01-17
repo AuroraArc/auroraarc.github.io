@@ -277,3 +277,12 @@ strong {
 .bottom-space {
   height: 4rem; /* Adjust the height as needed */
 }
+
+.small-font {
+  font-size: 0.875rem; /* Adjust the size as needed */
+}
+
+.hanging-indent {
+  text-indent: -1.5em; /* Adjust the size as needed */
+  padding-left: 1.5em; /* Adjust the size as needed */
+}

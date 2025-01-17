@@ -37,8 +37,8 @@ const QMLDFT = () => {
         </p>
         <figure className="text-center">
           <img src={errorvscost} alt="errorvscost" className="mx-auto my-4" style={{ width: '400px', height: '320px '}} />
-          <figcaption className="text-base-content text-opacity-70 mt-2">
-            Figure 1: Error vs. Cost.
+          <figcaption className="text-base-content text-opacity-70 mt-2 small-font">
+            <strong>Figure 1: Error vs. Cost.</strong> <br />
             Kulichenko, Maksim, et al. “The rise of neural networks for materials and Chemical Dynamics.” The Journal of Physical Chemistry Letters, vol. 12, no. 26, 1 July 2021, pp. 6227–6243.
           </figcaption>
         </figure>
@@ -48,8 +48,8 @@ const QMLDFT = () => {
         </p>
         <figure className="text-center">
           <img src={dft} alt="dft" className="mx-auto my-4" style={{ width: '400px', height: '250px '}} />
-          <figcaption className="text-base-content text-opacity-70 mt-2">
-          Figure 2: Density functional theory (DFT) abandons the many-particle electron reality in favor of electron density.
+          <figcaption className="text-base-content text-opacity-70 mt-2 small-font">
+          <strong>Figure 2: Density functional theory (DFT) abandons the many-particle electron reality in favor of electron density.</strong> <br />
           Lusk, Mark T., and Ann E. Mattsson. “High-Performance Computing for Materials Design to Advance Energy Science.” MRS Bulletin 36.3 (2011): 169–174.
           </figcaption>
         </figure>
@@ -68,8 +68,8 @@ const QMLDFT = () => {
         </p>
         <figure className="text-center">
           <img src={md} alt="md" className="mx-auto my-4" style={{ width: '400px', height: '300px '}} />
-          <figcaption className="text-base-content text-opacity-70 mt-2">
-          Figure 3: Modeling of a polymeric molecule as a multi-bead spring-chain.
+          <figcaption className="text-base-content text-opacity-70 mt-2 small-font">
+          <strong>Figure 3: Modeling of a polymeric molecule as a multi-bead spring-chain.</strong> <br />
           Rüttgers, A., and M. Griebel. “Multiscale simulation of polymeric fluids using the sparse grid combination technique.” Applied Mathematics and Computation, vol. 319, Feb. 2018, pp. 425–443.
           </figcaption>
         </figure>
@@ -79,8 +79,8 @@ const QMLDFT = () => {
         <h3 className="text-2xl font-bold text-base-content mt-4">ML: The Solution?</h3>
         <figure className="text-center">
           <img src={errorvscostml} alt="errorvscostml" className="mx-auto my-4" style={{ width: '400px', height: '320px '}} />
-          <figcaption className="text-base-content text-opacity-70 mt-2">
-          Figure 4: Error vs. Cost.
+          <figcaption className="text-base-content text-opacity-70 mt-2 small-font">
+          <strong>Figure 4: Error vs. Cost.</strong> <br />
           Kulichenko, Maksim, et al. “The rise of neural networks for materials and Chemical Dynamics.” The Journal of Physical Chemistry Letters, vol. 12, no. 26, 1 July 2021, pp. 6227–6243.
           </figcaption>
         </figure>
@@ -119,8 +119,8 @@ const QMLDFT = () => {
         </p>
         <figure className="text-center">
           <img src={ldgcnn} alt="LDGCNN" className="mx-auto my-4" style={{ width: '500px', height: '250px '}} />
-          <figcaption className="text-base-content text-opacity-70 mt-2">
-          Figure 7: LDGCNN architecture.
+          <figcaption className="text-base-content text-opacity-70 mt-2 small-font">
+          <strong>Figure 5: LDGCNN architecture.</strong> <br />
           Zhang, Kuangen, et al. "Linked dynamic graph cnn: Learning through point cloud by linking hierarchical features." 2021 27th international conference on mechatronics and machine vision in practice (M2VIP). IEEE, 2021.
           </figcaption>
         </figure>
@@ -134,8 +134,8 @@ const QMLDFT = () => {
         <p className="text-base-content text-opacity-70 mt-2">
         <figure className="text-center">
           <img src={qcbm} alt="qcbm" className="mx-auto my-4" style={{ width: '700px', height: '400px '}} />
-          <figcaption className="text-base-content text-opacity-70 mt-2">
-          Figure 6: A visualization of the QCBM algorithm and generalization evaluation scheme.
+          <figcaption className="text-base-content text-opacity-70 mt-2 small-font">
+          <strong>Figure 6: A visualization of the QCBM algorithm and generalization evaluation scheme.</strong> <br />
           Gili, Kaitlin, et al. "Do quantum circuit born machines generalize?." Quantum Science and Technology 8.3 (2023): 035021.
           </figcaption>
         </figure>
@@ -152,8 +152,8 @@ const QMLDFT = () => {
         </p>
         <h2 className="text-xl font-bold text-base-content mt-4">References</h2>
         <div className="text-base-content text-opacity-70 mt-2">
-          <p>Qi, Charles Ruizhongtai, et al. "Pointnet++: Deep hierarchical feature learning on point sets in a metric space." Advances in neural information processing systems 30 (2017). <a href="https://doi.org/10.48550/arXiv.1706.02413" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://doi.org/10.48550/arXiv.1706.02413</a></p>
-          <p>Zhang, Kuangen, et al. "Linked dynamic graph cnn: Learning through point cloud by linking hierarchical features." 2021 27th international conference on mechatronics and machine vision in practice (M2VIP). IEEE, 2021. <a href="https://doi.org/10.48550/arXiv.1904.10014" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://doi.org/10.48550/arXiv.1904.10014</a></p>
+          <p className="hanging-indent">Qi, Charles Ruizhongtai, et al. "Pointnet++: Deep hierarchical feature learning on point sets in a metric space." Advances in neural information processing systems 30 (2017). <a href="https://doi.org/10.48550/arXiv.1706.02413" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://doi.org/10.48550/arXiv.1706.02413</a></p>
+          <p className="hanging-indent">Zhang, Kuangen, et al. "Linked dynamic graph cnn: Learning through point cloud by linking hierarchical features." 2021 27th international conference on mechatronics and machine vision in practice (M2VIP). IEEE, 2021. <a href="https://doi.org/10.48550/arXiv.1904.10014" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://doi.org/10.48550/arXiv.1904.10014</a></p>
         </div>
       </div>
       <div className="bottom-space"></div> {}
