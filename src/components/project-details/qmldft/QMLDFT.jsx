@@ -7,7 +7,7 @@ import ldgcnn from './ldgcnn.png';
 import qcbm from './qcbm.png';
 import papers from './papers.png';
 import edgeconv from './edgeconv.png';
-import graph-pc from './graph-pc.png';
+import graphpc from './graph-pc.png';
 
 const QMLDFT = () => {
   return (
@@ -163,7 +163,7 @@ const QMLDFT = () => {
           Next, the data passes into an EdgeConv layer. EdgeConv, short for Edge Convolution, is a novel type of neural network layer introduced by the DGCNN. Unlike traditional convolutional layers that operate on a fixed grid, EdgeConv works on dynamic graphs, making it ideal for point cloud data.
         </p>
         <figure className="text-center mt-2">
-          <img src={graph-pc} alt="graph-pc" className="mx-auto my-4" style={{ width: '500px', height: '250px '}} />
+          <img src={graphpc} alt="graph-pc" className="mx-auto my-4" style={{ width: '500px', height: '250px '}} />
           <figcaption className="text-base-content text-opacity-70 mt-2 small-font" style={{ display: 'block', width: 'inherit', textAlign: 'left' }}>
             <strong>Figure 7: Graph of point cloud.</strong> <br />
             Zhang, Kuangen, et al. "Linked dynamic graph cnn: Learning through point cloud by linking hierarchical features." 2021 27th international conference on mechatronics and machine vision in practice (M2VIP). IEEE, 2021.
