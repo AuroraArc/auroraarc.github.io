@@ -30,7 +30,7 @@ const MusicGenOld = () => {
         <p className="text-base-content text-opacity-70 mt-2">
         This project does not rely on formal music theory for evaluating compositions. Instead, rules are defined within the fitness function of the initial genetic algorithm and influenced by the output of the GRU model. The fitness evaluation function, adapted from a similar study [1], compares each generated composition to those in the initial dataset. Here is the pseudocode for the fitness function:
         </p>
-        <pre className="bg-gray-100 p-4 rounded-md overflow-auto">
+        <pre className="p-4 rounded-md overflow-auto">
           <code className="text-sm text-gray-800">
             {
               `
