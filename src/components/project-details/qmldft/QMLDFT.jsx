@@ -189,6 +189,7 @@ const QMLDFT = () => {
         <h2 className="text-2xl font-bold text-base-content mt-4">Outlook</h2>
         <p className="text-base-content text-opacity-70 mt-2">
           Our ultimate goal is to be able to apply this model to protein systems. This is an ambitious target, given the size and complexity of proteins, but it's where we believe our approach could have the most significant impact. Accurate electron density calculations for proteins could revolutionize our understanding of protein-drug and protein-ligand interactions, enzyme catalysis, and protein folding.
+        </p>
         <h2 className="text-2xl font-bold text-base-content mt-4">References</h2>
         <div className="text-base-content text-opacity-70 mt-2">
           <p className="hanging-indent">Qi, Charles Ruizhongtai, et al. "Pointnet++: Deep hierarchical feature learning on point sets in a metric space." Advances in neural information processing systems 30 (2017). <a href="https://doi.org/10.48550/arXiv.1706.02413" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://doi.org/10.48550/arXiv.1706.02413</a></p>
