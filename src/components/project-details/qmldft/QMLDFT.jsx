@@ -6,6 +6,8 @@ import errorvscostml from './errorvscostml.png';
 import ldgcnn from './ldgcnn.png';
 import qcbm from './qcbm.png';
 import papers from './papers.png';
+import edgeconv from './edgeconv.png';
+import graph-pc from './graph-pc.png';
 
 const QMLDFT = () => {
   return (
@@ -100,7 +102,7 @@ const QMLDFT = () => {
         <p className="text-base-content text-opacity-70 mt-2">
           Neural networks are highly flexible, nonlinear functions with thousands to millions of parameters that are optimized to fit a dataset. A large number of parameters provides many degrees of freedom, allowing an optimization algorithm to decide the best mapping that transforms the input into an estimation of a desired property.
         </p>
-        <h2 className="text-xl font-bold text-base-content mt-4">Model Proposal</h2>
+        <h2 className="text-2xl font-bold text-base-content mt-4">Model Proposal</h2>
         <p className="text-base-content text-opacity-70 mt-2">
           The model I propose integrates quantum computing with a graph convolutional neural network (CNN)-like model. First and foremost, this model leverages the power of both quantum and classical computing. By integrating these two paradigms, we're ale to tackle the complex problem of electronic density calculations in a way that hasn't been done before. The quantum component allows us to capture intricate quantum interactions, while the classical neural network provides robust learning capabilities. We believe our approach has the potential to overcome some of the limitations of current density calculation methods.
         </p>
@@ -150,7 +152,44 @@ const QMLDFT = () => {
         <p className="text-base-content text-opacity-70 mt-2">
           The project successfully demonstrated the potential of QC-ML hybrid models in accelerating DFT calculations. Future work includes further optimization and testing.
         </p>
-        <h2 className="text-xl font-bold text-base-content mt-4">References</h2>
+        <h3 className="text-xl font-bold text-base-content mt-4">Model Proposal (cont'd)</h3>
+        <p className="text-base-content text-opacity-70 mt-2">
+          Input molecules are transformed into a point cloud (not shown), where each point represents an atom.
+        </p>
+        <figure className="text-center mt-2">
+          <img src={edgeconv} alt="edgeconv" className="mx-auto my-4" style={{ width: '500px', height: '250px '}} />
+        </figure>
+        <p className="text-base-content text-opacity-70 mt-2">
+          Next, the data passes into an EdgeConv layer. EdgeConv, short for Edge Convolution, is a novel type of neural network layer introduced by the DGCNN. Unlike traditional convolutional layers that operate on a fixed grid, EdgeConv works on dynamic graphs, making it ideal for point cloud data.
+        </p>
+        <figure className="text-center mt-2">
+          <img src={graph-pc} alt="graph-pc" className="mx-auto my-4" style={{ width: '500px', height: '250px '}} />
+          <figcaption className="text-base-content text-opacity-70 mt-2 small-font" style={{ display: 'block', width: 'inherit', textAlign: 'left' }}>
+            <strong>Figure 7: Graph of point cloud.</strong> <br />
+            Zhang, Kuangen, et al. "Linked dynamic graph cnn: Learning through point cloud by linking hierarchical features." 2021 27th international conference on mechatronics and machine vision in practice (M2VIP). IEEE, 2021.
+          </figcaption>
+        </figure>
+        <p className="text-base-content text-opacity-70 mt-2">
+          Here's how it works:
+        </p>
+        <ol className="text-base-content text-opacity-70 mt-2 list-disc ml-6">
+          <li>For each point in our cloud, EdgeConv first constructs a local graph by connecting the point to its nearest neighbors.</li>
+          <li>It then applies a learnable function to the edges of this graph. This function considers both the features of the central points and the differences between the central point and its neighbors.</li>
+          <li>Finally, it aggregates the edge features using a symmetric function, typically max pooling.</li>
+        </ol>
+        <p className="text-base-content text-opacity-70 mt-2">
+          Why is this so important to this model?
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+          In a molecule, the relationships between atoms aren't fixed--they depend on the overall molecular structure and can change with different configurations. In the context of electronic density, we need to model both the immediate environment around each atom AND how this relates to the overall molecular structure. This is crucial because electronic density is influenced by both nearby atoms and the overall molecular configuration. EdgeConv's ability to capture these dynamic relationships makes it an ideal choice for our model.
+        </p>
+        <p className="text-base-content text-opacity-70 mt-2">
+          After all the classical data has been processed, if we choose to use quantum computing, it is encoded into a quantum state using a series of quantum gates. The QCBM then applies a series of parametrized quantum operations. The final quantum state is measured, producing a probability distribution that represents our predicted electronic density.
+        </p>
+        <h2 className="text-2xl font-bold text-base-content mt-4">Outlook</h2>
+        <p className="text-base-content text-opacity-70 mt-2">
+          Our ultimate goal is to be able to apply this model to protein systems. This is an ambitious target, given the size and complexity of proteins, but it's where we believe our approach could have the most significant impact. Accurate electron density calculations for proteins could revolutionize our understanding of protein-drug and protein-ligand interactions, enzyme catalysis, and protein folding.
+        <h2 className="text-2xl font-bold text-base-content mt-4">References</h2>
         <div className="text-base-content text-opacity-70 mt-2">
           <p className="hanging-indent">Qi, Charles Ruizhongtai, et al. "Pointnet++: Deep hierarchical feature learning on point sets in a metric space." Advances in neural information processing systems 30 (2017). <a href="https://doi.org/10.48550/arXiv.1706.02413" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://doi.org/10.48550/arXiv.1706.02413</a></p>
           <p className="hanging-indent">Zhang, Kuangen, et al. "Linked dynamic graph cnn: Learning through point cloud by linking hierarchical features." 2021 27th international conference on mechatronics and machine vision in practice (M2VIP). IEEE, 2021. <a href="https://doi.org/10.48550/arXiv.1904.10014" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">https://doi.org/10.48550/arXiv.1904.10014</a></p>
