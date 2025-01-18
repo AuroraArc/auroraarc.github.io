@@ -35,9 +35,9 @@ const QMLDFT = () => {
         <p className="text-base-content text-opacity-70 mt-2">
           An important benchmark for QM methods is to achieve so-called chemical accuracy--errors of approximately 1kcal/mol, which is the energy scale associated with thermal fluctuations at ambient temperatures.
         </p>
-        <figure className="text-center">
+        <figure className="text-center mt-4">
           <img src={errorvscost} alt="errorvscost" className="mx-auto my-4" style={{ width: '400px', height: '320px '}} />
-          <figcaption className="text-base-content text-opacity-70 mt-2 small-font">
+          <figcaption className="text-base-content text-opacity-70 mt-2 small-font" style={{ width: '100%', textAlign: 'left' }}>
             <strong>Figure 1: Error vs. Cost.</strong> <br />
             Kulichenko, Maksim, et al. “The rise of neural networks for materials and Chemical Dynamics.” The Journal of Physical Chemistry Letters, vol. 12, no. 26, 1 July 2021, pp. 6227–6243.
           </figcaption>
@@ -48,7 +48,7 @@ const QMLDFT = () => {
         </p>
         <figure className="text-center">
           <img src={dft} alt="dft" className="mx-auto my-4" style={{ width: '400px', height: '250px '}} />
-          <figcaption className="text-base-content text-opacity-70 mt-2 small-font">
+          <figcaption className="text-base-content text-opacity-70 mt-2 small-font" style={{ width: '100%', textAlign: 'left' }}>
           <strong>Figure 2: Density functional theory (DFT) abandons the many-particle electron reality in favor of electron density.</strong> <br />
           Lusk, Mark T., and Ann E. Mattsson. “High-Performance Computing for Materials Design to Advance Energy Science.” MRS Bulletin 36.3 (2011): 169–174.
           </figcaption>
@@ -66,9 +66,9 @@ const QMLDFT = () => {
         <p className="text-base-content text-opacity-70 mt-2">
         Modeling of dynamical processes (chemical reactions, shocks, protein folding, and phase transitions in materials, to name a few) requires large-scale molecular dynamics (MD) simulations. And so, the question arises: can we find a more affordable approach? What if we disregard quantum mechanics entirely?
         </p>
-        <figure className="text-center">
+        <figure className="text-center mt-4">
           <img src={md} alt="md" className="mx-auto my-4" style={{ width: '400px', height: '300px '}} />
-          <figcaption className="text-base-content text-opacity-70 mt-2 small-font">
+          <figcaption className="text-base-content text-opacity-70 mt-2 small-font" style={{ width: '100%', textAlign: 'left' }}>
           <strong>Figure 3: Modeling of a polymeric molecule as a multi-bead spring-chain.</strong> <br />
           Rüttgers, A., and M. Griebel. “Multiscale simulation of polymeric fluids using the sparse grid combination technique.” Applied Mathematics and Computation, vol. 319, Feb. 2018, pp. 425–443.
           </figcaption>
@@ -77,9 +77,9 @@ const QMLDFT = () => {
         One computational simplification is to neglect quantum mechanics entirely with the use of classical force fields, which approximate the system as a classical bead-spring model with additional terms for Coulomb and dispersion interactions. These models typically exhibit linear scaling, facilitating MD simulations of systems with millions or even billions of atoms. The major downside to this is that the bonding-oriented modeling approach limits their applicability to nonreactive conditions. Thus, they are not reliable for investigations of, for example, reaction pathways and transition states or generally dynamics far from a state of equilibrium. While the scalability of force fields is excellent, their accuracy and transferability are severely constrained.
         </p>
         <h3 className="text-2xl font-bold text-base-content mt-4">ML: The Solution?</h3>
-        <figure className="text-center">
+        <figure className="text-center mt-4">
           <img src={errorvscostml} alt="errorvscostml" className="mx-auto my-4" style={{ width: '400px', height: '320px '}} />
-          <figcaption className="text-base-content text-opacity-70 mt-2 small-font">
+          <figcaption className="text-base-content text-opacity-70 mt-2 small-font" style={{ width: '100%', textAlign: 'left' }}>
           <strong>Figure 4: Error vs. Cost.</strong> <br />
           Kulichenko, Maksim, et al. “The rise of neural networks for materials and Chemical Dynamics.” The Journal of Physical Chemistry Letters, vol. 12, no. 26, 1 July 2021, pp. 6227–6243.
           </figcaption>
@@ -111,15 +111,15 @@ const QMLDFT = () => {
         <p className="text-base-content text-opacity-70 mt-2">
           There are two key adaptations that form the backbone of our approach.
         </p>
-        <p className="text-center">
+        <figure className="text-center mt-4">
           <img src={papers} alt="papers" className="mx-auto my-4" style={{ width: '700px', height: '300px '}} />
-        </p>
+        </figure>
         <p className="text-base-content text-opacity-70 mt-2">
           PointNet++ introduced a hierarchical feature learning approach that has proven incredibly effective for point cloud processing. The key insight here is the ability to capture fine-grained patterns and features at different scales. In the context of our work, this hierarchical approach is crucial. It allows us to capture both local atomic interactions and broader molecular structures. Imagine zooming in to see individual atom-electron interactions, then zooming out to understand how these interactions affect the overall molecular structure. Next, we have Dynamic Graph CNN. The standout feature here is its EdgeConv module. This module constructs a local neighborhood graph and applies convolution-like operations on the edges connecting neighboring pairs of points.
         </p>
-        <figure className="text-center">
+        <figure className="text-center mt-4">
           <img src={ldgcnn} alt="LDGCNN" className="mx-auto my-4" style={{ width: '500px', height: '250px '}} />
-          <figcaption className="text-base-content text-opacity-70 mt-2 small-font">
+          <figcaption className="text-base-content text-opacity-70 mt-2 small-font" style={{ width: '100%', textAlign: 'left' }}>
           <strong>Figure 5: LDGCNN architecture.</strong> <br />
           Zhang, Kuangen, et al. "Linked dynamic graph cnn: Learning through point cloud by linking hierarchical features." 2021 27th international conference on mechatronics and machine vision in practice (M2VIP). IEEE, 2021.
           </figcaption>
@@ -132,9 +132,9 @@ const QMLDFT = () => {
         </p>
         <h3 className="text-xl font-bold text-base-content mt-4">Quantum Circuit Born Machine</h3>
         <p className="text-base-content text-opacity-70 mt-2">
-        <figure className="text-center">
+        <figure className="text-center mt-4">
           <img src={qcbm} alt="qcbm" className="mx-auto my-4" style={{ width: '700px', height: '400px '}} />
-          <figcaption className="text-base-content text-opacity-70 mt-2 small-font">
+          <figcaption className="text-base-content text-opacity-70 mt-2 small-font" style={{ width: '100%', textAlign: 'left' }}>
           <strong>Figure 6: A visualization of the QCBM algorithm and generalization evaluation scheme.</strong> <br />
           Gili, Kaitlin, et al. "Do quantum circuit born machines generalize?." Quantum Science and Technology 8.3 (2023): 035021.
           </figcaption>
