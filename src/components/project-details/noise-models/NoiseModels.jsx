@@ -20,7 +20,7 @@ const NoiseModels = () => {
       <div className="project-content mt-6 mx-auto max-w-screen-lg">
         <h2 className="text-2xl font-bold text-base-content mt-4">Abstract</h2>
         <p className="text-base-content text-opacity-70 mt-2">
-          placeholder
+          Quantum computing promises exponential speedups but is hindered by quantum noise, which affects accuracy and stability. This project explored the impact of noise on quantum models, leveraging stochastic resonance, where added noise can improve performance. Using Qiskit’s Variational Quantum Classifier (VQC) and classical comparisons via scikit-learn's Support Vector Classifier on the Iris dataset, various noise models—bit-flip, amplitude damping, and depolarizing—were tested. Results suggest that small amounts of amplitude damping noise may enhance performance, while higher noise levels degrade it. Future work involves testing on real quantum hardware, refining noise models for real-world conditions, and analyzing the observed performance bump to optimize noise-accuracy trade-offs, offering insights into the nuanced role of noise in quantum computing.
         </p>
         <h2 className="text-2xl font-bold text-base-content mt-4">Introduction</h2>
         <p className="text-base-content text-opacity-70 mt-2">

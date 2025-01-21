@@ -235,7 +235,7 @@ const MusicGenOld = () => {
           Another improvement involves refining the fitness function used to generate the initial dataset for training the GRU model. The current fitness function primarily compares generated compositions to those in the initial dataset, which can introduce limitations:
         </p>
         <ul className="list-disc list-inside text-base-content text-opacity-70 mt-2">
-          <li>it may overly emphasize similarities to the dataset, reducing originality.</li>
+          <li>It may overly emphasize similarities to the dataset, reducing originality.</li>
           <li>It restricts the complexity of generated compositions, as it is optimized for simpler patterns rather than diverse or intricate musical structures.</li>
         </ul>
         <p className="text-base-content text-opacity-70 mt-2">
