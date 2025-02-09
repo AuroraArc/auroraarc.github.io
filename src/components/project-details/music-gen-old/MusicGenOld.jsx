@@ -15,7 +15,7 @@ const MusicGenOld = () => {
       </p>
       <div className="italic-section mx-auto max-w-screen-lg">
         <p className="text-base-content text-opacity-50 mt-2 italic opacity">
-            This is an old project that eventually transitioned into the Performer-based model I am currently working on. Unfortunately, I seemed to have lost the original code for this project. It was connected to an old university-affiliated GitHub account and I have forgotten the password to it.
+            This is an old project that eventually transitioned into the Performer-based model I am currently working on.
         </p>
       </div>
       <hr className="my-6 border-t-2 border-gray-300" />

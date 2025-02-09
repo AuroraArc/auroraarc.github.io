@@ -18,7 +18,7 @@ const QMLDFT = () => {
       </p>
       <div className="italic-section mx-auto max-w-screen-lg">
         <p className="text-base-content text-opacity-50 mt-2 italic opacity">
-            The first half is a symposium presentation I gave on the topic of my research and the surrounding background regarding quantum chemistry and its computational challenges. The second half is a more detailed explanation of the architecture I proposed and the reasons behind it.
+            The first half is a symposium presentation I gave on the topic of my research and the surrounding background regarding quantum chemistry and its computational challenges. The project is closed-source, so I unfortunately cannot share any code.
         </p>
       </div>
       <div className="project-content mt-6">
