@@ -13,7 +13,8 @@ const NoiseModels = () => {
       </p>
       <div className="italic-section mx-auto max-w-screen-lg">
         <p className="text-base-content text-opacity-50 mt-2 italic opacity">
-          This is the second of two semesters of a solo research project conducted by me under the guidance of Dr. Nicholas LaRacuente (<a href="mailto:nlaracu@iu.edu" className="text-blue-500">nlaracu@iu.edu</a>) during the spring 2024 semester. Link to the source code and how to run it can be found <a href="https://github.com/AuroraArc/noise-analysis" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">here</a>.
+          This is the second of two semesters of a solo research project conducted by me under the guidance of Dr. Nicholas LaRacuente (<a href="mailto:nlaracu@iu.edu" className="text-blue-500">nlaracu@iu.edu</a>) during the spring 2024 semester.
+          {/* Link to the source code and how to run it can be found <a href="https://github.com/AuroraArc/noise-analysis" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">here</a>. */}
         </p>
       </div>
       <hr className="my-6 border-t-2 border-gray-300" />

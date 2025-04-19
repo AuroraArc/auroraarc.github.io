@@ -10,7 +10,8 @@ const MusicGen = () => {
       </p>
       <div className="italic-section mx-auto max-w-screen-lg">
         <p className="text-base-content text-opacity-50 mt-2 italic opacity">
-          The current code is slightly outdated and is broken at the moment. There is an older version of the project that instead used a genetic algorithm with a GRU-based model for music generation. This can be viewed <Link to="/projects/music-generation-using-ggas-(old)" className="text-blue-500 underline">here</Link>.
+          The current code is slightly outdated and is broken at the moment. There is an older version of the project that instead used a genetic algorithm with a GRU-based model for music generation.
+          {/* This can be viewed <Link to="/projects/music-generation-using-ggas-(old)" className="text-blue-500 underline">here</Link>. */}
         </p>
       </div>
       <hr className="my-6 border-t-2 border-gray-300" />
