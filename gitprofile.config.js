@@ -29,8 +29,9 @@ const config = {
     email: 'henry.yu094@gmail.com',
     },
     resume: {
-    fileUrl:
-      'https://github.com/AuroraArc/auroraarc.github.io/blob/main/cv.pdf'
+    // fileUrl:
+      
+      // 'https://github.com/AuroraArc/auroraarc.github.io/blob/main/cv.pdf'
   },
   skills: [
     'Python',
