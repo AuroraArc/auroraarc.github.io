@@ -5,6 +5,7 @@ import GitProfile from './components/GitProfile';
 import config from '../gitprofile.config';
 import Header from './components/Header';
 import Projects from './components/Projects';
+import QRC from './components/project-details/qrc/QRC';
 import QMLDFT from './components/project-details/qmldft/QMLDFT';
 import MusicGen from './components/project-details/music-gen/MusicGen';
 import MusicGenOld from './components/project-details/music-gen-old/MusicGenOld';
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<GitProfile config={config} />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/quantum-reservoir-computing-for-molecular-activity-prediction-using-neutral-atom-quantum-architecture" element={<QRC />} />
         <Route path="/projects/quantum-computing-and-ml-for-dft-calculations-in-proteins" element={<QMLDFT />} />
         <Route path="/projects/music-generation-using-performer" element={<MusicGen />} />
         <Route path="/projects/music-generation-using-ggas-(old)" element={<MusicGenOld />} />
