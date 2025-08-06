@@ -89,16 +89,16 @@ const config = {
         'Proposed a novel QC-ML hybrid model for accelerating DFT calculations in large molecular systems using a graph-CNN like model with a QCBM.',
       imageUrl: 'https://lh3.googleusercontent.com/1xoO5BAUUU8kLns4myMNnKw6RRQyUk1JdlWL1M0aDiagMgaBeDA9O8Y4rYFAo9hfnzmb0cnUMrT_-cStBqnyp_zW59F5Edwbvxcy3EVmfeKS-PNgVw=w1072-h603-n-nu-rw',
     },
+    // {
+    //   title: 'Music Generation Using Performer',
+    //   description:
+    //     'Implementing a music generation model using Performer, a transformer-based model that uses the FAVOR+ algorithm for efficient attention computation.',
+    //   imageUrl: 'https://media.istockphoto.com/id/1175435360/vector/music-note-icon-vector-illustration.jpg?s=612x612&w=0&k=20&c=R7s6RR849L57bv_c7jMIFRW4H87-FjLB8sqZ08mN0OU=',
+    // },
     {
-      title: 'Music Generation Using Performer',
-      description:
-        'Implementing a music generation model using Performer, a transformer-based model that uses the FAVOR+ algorithm for efficient attention computation.',
-      imageUrl: 'https://moises.ai/_next/image/?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhow_to_reading_sheet_music_image_338d99b137%2Fhow_to_reading_sheet_music_image_338d99b137.jpg&w=1920&q=75',
-    },
-    {
-      title: 'Music Generation Using GGAs (OLD)',
+      title: 'Music Generation Using GGAs',
       description: 'Implementing a music generation model using Genetic Algorithm (GGA) for evolving music sequences.',
-      imageUrl: 'https://moises.ai/_next/image/?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhow_to_reading_sheet_music_image_338d99b137%2Fhow_to_reading_sheet_music_image_338d99b137.jpg&w=1920&q=75',
+      imageUrl: 'https://media.istockphoto.com/id/1175435360/vector/music-note-icon-vector-illustration.jpg?s=612x612&w=0&k=20&c=R7s6RR849L57bv_c7jMIFRW4H87-FjLB8sqZ08mN0OU=',
     },
     {
       title: 'Analysis of Noise on Quantum Models',
