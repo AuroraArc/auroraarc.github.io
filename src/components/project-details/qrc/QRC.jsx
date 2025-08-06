@@ -8,4 +8,6 @@ const QRC = () => {
             <img src="https://www.researchgate.net/publication/372198645/figure/fig1/AS:11431281173276507@1688819213560/Principle-of-quantum-reservoir-computing-The-reservoir-neurons-blue-circles-are-basis.png" alt="Quantum Reservoir Computing" />
         </div>
     );
-}
+};
+
+export default QRC;
