@@ -9,13 +9,13 @@ import main_abc from './main_abc.png';
 const MusicGenOld = () => {
   return (
     <div className="fade-in h-screen bg-base-100 p-4 lg:p-10">
-      <h1 className="text-3xl font-bold text-base-content text-center mt-4">Music Generation Using GGAs (OLD)</h1>
+      <h1 className="text-3xl font-bold text-base-content text-center mt-4">Music Generation Using GGAs</h1>
       <p className="text-base-content text-opacity-70 text-center mt-2">
         Implementing a music generation model using Genetic Algorithm (GGA) for evolving music sequences.
       </p>
       <div className="italic-section mx-auto max-w-screen-lg">
         <p className="text-base-content text-opacity-50 mt-2 italic opacity">
-            This is an old project that eventually transitioned into the Performer-based model I am currently working on.
+            This project eventually transitioned into the Performer-based model I am currently working on.
         </p>
       </div>
       <hr className="my-6 border-t-2 border-gray-300" />
